@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">WAEC PAST QUESTION APP</string>
     <string name="title">Title</string>
+
+<string name="Questions">
+      <br>
+         1. What is your Favourite food? \n
+      </br>
+      <br>
+         2. Which is your favourite sport?\n
+      </br>
+      <br>
+         3. Whats your bucket list?
+      </br>
+   </string>
 </resources>
