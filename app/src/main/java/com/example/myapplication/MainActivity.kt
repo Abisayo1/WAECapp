@@ -10,6 +10,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText( this,"Please enter your name", Toast.LENGTH_SHORT).show()
             } else {
 
-                val intent = Intent(this, MainActivity2::class.java)
+                val intent = Intent(this, Subjects::class.java)
                 startActivity(intent)
             }
         }
