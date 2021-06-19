@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText( this,"Please enter your name", Toast.LENGTH_SHORT).show()
             } else {
 
-                val intent = Intent(this, Subjects::class.java)
+                val intent = Intent(this, MainActivity2::class.java)
                 startActivity(intent)
             }
         }
