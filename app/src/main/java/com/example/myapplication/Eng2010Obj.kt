@@ -2,7 +2,7 @@ package com.example.myapplication
 
 data class Eng2010Obj(
         var id: Int,
-        var question: String,
+        val question: String,
         var image: Int,
         var OptionOne: String,
         var OptionTwo: String,
