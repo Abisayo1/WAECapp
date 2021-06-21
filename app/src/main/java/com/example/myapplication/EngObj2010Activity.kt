@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.AdaptiveIconDrawable
@@ -19,12 +20,14 @@ class MainActivity3 : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Eng2010Obj>? = null
     private var mSelectedOptionPosition: Int = 0
+    private var mCorrectAnswers: Int = 0
+    private var mUserName: String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
-
+        mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
 
         mQuestionsList = Eng2010Constants.getQuestions()
         setQuestion()
@@ -103,13 +106,20 @@ class MainActivity3 : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= mQuestionsList!!.size ->{
                             setQuestion()
                         }else ->{
-                        Toast.makeText(this, "You have succesfully completed the Quiz", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, ResultActivity::class.java)
+                        intent.putExtra(Eng2010Constants.USER_NAME, mUserName)
+                        intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                        intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                        startActivity(intent)
+                        finish()
                     }
                     }
                 }else{
                     val question = mQuestionsList?.get(mCurrentPosition -1)
                     if (question!!.CorrectAnswer != mSelectedOptionPosition) {
                         answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                    }else{
+                        mCorrectAnswers ++
                     }
 
                     answerView(question.CorrectAnswer, R.drawable.correct_option_border_bg)

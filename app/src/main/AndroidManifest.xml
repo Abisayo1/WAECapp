@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivityFragment"></activity>
+        <activity android:name=".Eng2010ObjAns"></activity>
+        <activity
+            android:name=".ResultActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name=".ActivityFragment" />
         <activity android:name=".EngObjEssay" />
         <activity android:name=".EngYear" />
         <activity android:name=".Subjects" />

@@ -17,7 +17,7 @@ class EngObjEssay : AppCompatActivity() {
 
         button.setOnClickListener{
               val intent = Intent(this, MainActivity3::class.java)
-               startActivity(intent)
+              startActivity(intent)
             }
         }
 

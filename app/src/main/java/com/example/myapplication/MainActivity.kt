@@ -31,7 +31,9 @@ class MainActivity : AppCompatActivity() {
             } else {
 
                 val intent = Intent(this, MainActivity2::class.java)
+                intent.putExtra(Eng2010Constants.USER_NAME, et_name.text.toString())
                 startActivity(intent)
+
             }
         }
     }

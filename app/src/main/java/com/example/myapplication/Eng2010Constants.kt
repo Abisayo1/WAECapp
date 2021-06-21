@@ -4,6 +4,12 @@ import android.provider.Settings.Secure.getString
 import com.example.myapplication.R as R1
 
 object Eng2010Constants {
+
+    const val USER_NAME: String = "user_name"
+    const val TOTAL_QUESTIONS: String = "total_questions"
+    const val CORRECT_ANSWERS: String = "correct_answers"
+    const val mSELECTED: Int = 0
+
     fun getQuestions(): ArrayList<Eng2010Obj> {
 
         val questionsList = ArrayList<Eng2010Obj>()

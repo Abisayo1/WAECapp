@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@drawable/ic_bg"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Result"
+        android:textColor ="@android:color/white"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="Username"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Your score is 9 out of 10"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="20sp">
+            </TextView>
+
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text = "See Answsers"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@android:color/white"/>
+
+    <Button
+        android:id="@+id/btn_result2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text = "Go to home screen"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@android:color/white"/>
+
+
+
+
+</LinearLayout>
