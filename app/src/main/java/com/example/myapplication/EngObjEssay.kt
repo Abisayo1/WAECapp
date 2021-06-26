@@ -11,12 +11,15 @@ import kotlinx.android.synthetic.main.activity_eng_obj_essay.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class EngObjEssay : AppCompatActivity() {
+    private var mUserName: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eng_obj_essay)
+        mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
 
         button.setOnClickListener{
               val intent = Intent(this, MainActivity3::class.java)
+            intent.putExtra(Eng2010Constants.USER_NAME, mUserName)
               startActivity(intent)
             }
         }

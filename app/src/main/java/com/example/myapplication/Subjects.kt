@@ -10,9 +10,14 @@ import kotlinx.android.synthetic.main.activity_subjects.*
 //import java.util.function.Supplier
 
 class Subjects : AppCompatActivity() {
+
+    private var mUserName: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_subjects)
+
+        mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
 
 
         val layoutManager = LinearLayoutManager(this)

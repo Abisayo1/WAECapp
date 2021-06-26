@@ -5,7 +5,7 @@ import com.example.myapplication.R as R1
 
 object Eng2010Constants {
 
-    const val USER_NAME: String = "user_name"
+    var USER_NAME: String = "user_name"
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANSWERS: String = "correct_answers"
     const val mSELECTED: Int = 0
@@ -16,64 +16,60 @@ object Eng2010Constants {
 
         val que1 = Eng2010Obj(
                 id =1,
-                question = """I am going to the market to get the following stuff
-                    |1. Maggi
-                    |2, Eba
-                    |3. Tomato
-                """.trimMargin(),
+                question = "R1.string.Questions",
                 OptionOne = "ugly",
                 OptionTwo = "meagre",
                 OptionThree = "modest",
                 OptionFour = "lowly",
                 CorrectAnswer = 2,
-                image = 0
+                image = 0,
+                Answers = "Behold the lamb",
+                AnswersImg = 0
         )
 
         questionsList.add(que1)
 
         val que2 = Eng2010Obj(
                 id =1,
-                question = "What is the name of:" +
-                        "I am not great oo" +
-                        "no go dey do pass yourself ",
+                question = "R1.string.Questions",
                 OptionOne = "ugly",
                 OptionTwo = "meagre",
                 OptionThree = "modest",
                 OptionFour = "lowly",
                 CorrectAnswer = 2,
-                image = R1.drawable.calculator
+                image = R1.drawable.calculator,
+            Answers = "Behold the lamb",
+            AnswersImg = 0
         )
 
         questionsList.add(que2)
 
         val que3 = Eng2010Obj(
                 id =1,
-                question = "What is the name of:" +
-                        "I am not great oo" +
-                        "no go dey do pass yourself ",
+                question = "R1.string.Questions",
                 OptionOne = "ugly",
                 OptionTwo = "meagre",
                 OptionThree = "modest",
                 OptionFour = "lowly",
                 CorrectAnswer = 2,
-                image = R1.drawable.calculator
+                image = R1.drawable.calculator,
+            Answers = "Behold the lamb",
+            AnswersImg = 0
         )
 
         questionsList.add(que3)
 
         val que4 = Eng2010Obj(
                 id =1,
-                question = """I am going to teh market to see someon
-                    |Now when i get back i want ot eat yam and egg
-                    |do  not frub whatv is nit fryable 
-                    |na wa oo
-                """.trimMargin(),
+                question = "${(R1.string.Questions)}",
                 OptionOne = "ugly",
                 OptionTwo = "meagre",
                 OptionThree = "modest",
                 OptionFour = "lowly",
                 CorrectAnswer = 2,
-                image = 0
+                image = 0,
+            Answers = "Behold the lamb",
+            AnswersImg = 0
         )
 
         questionsList.add(que4)

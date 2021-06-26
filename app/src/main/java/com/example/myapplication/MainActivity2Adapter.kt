@@ -27,7 +27,11 @@ class MainActivity2Adapter(
             itemView.setOnClickListener {
                 if (currentPosition == 0)
                 {
+                    var mUserName: String?
+
                     val intent = Intent(itemView.context, Subjects::class.java)
+                    mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
+                    intent.putExtra(Eng2010Constants.USER_NAME, mUserName)
                     itemView.context.startActivity(intent)
                 }
 

@@ -59,7 +59,7 @@ class MainActivity3 : AppCompatActivity(), View.OnClickListener {
         progressBar.progress = mCurrentPosition
         tv_progress.text = "$mCurrentPosition" + "/" + progressBar.max
 
-        question1.text = question!!.question.toString()
+        question1.text = question!!.question
         Image.setImageResource(question.image)
         option1.text = question.OptionOne
         option2.text = question.OptionTwo

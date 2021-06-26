@@ -8,5 +8,8 @@ data class Eng2010Obj(
         var OptionTwo: String,
         var OptionThree: String,
         var OptionFour: String,
-        var CorrectAnswer: Int
+        var CorrectAnswer: Int,
+        var Answers: String,
+        var AnswersImg: Int
+
     )

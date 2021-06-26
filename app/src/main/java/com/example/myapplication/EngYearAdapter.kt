@@ -20,10 +20,14 @@ class EngYearAdapter(
 
         init {
 
+            var mUserName: String? = null
+
             itemView.setOnClickListener {
                 if (currentPosition == 0)
                 {
                     val intent = Intent(itemView.context, EngObjEssay::class.java)
+                    mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
+                    intent.putExtra(Eng2010Constants.USER_NAME, mUserName)
                     itemView.context.startActivity(intent)
                 }
 

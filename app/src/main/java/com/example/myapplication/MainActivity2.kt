@@ -8,9 +8,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity2 : AppCompatActivity() {
+    private var mUserName: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+
+        mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
 
         val Recycler_View = findViewById<RecyclerView>(R.id.recycler_view)
 
@@ -23,6 +26,7 @@ class MainActivity2 : AppCompatActivity() {
 
         Recycler_View.apply {
             layoutManager = GridLayoutManager(this@MainActivity2, 2)
+            intent.putExtra(Eng2010Constants.USER_NAME, mUserName)
             adapter = MainActivity2Adapter(listOfCars)
         }
         }

@@ -18,15 +18,22 @@ class SubjectsAdapter(
 ) : RecyclerView.Adapter<SubjectsAdapter.MyViewHolder>() {
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
+
+
+
         var currentSubject: Subject? = null
         var currentPosition: Int = 0
 
+
         init {
+           var mUserName: String? = null
 
             itemView.setOnClickListener {
                 if (currentPosition == 0)
                       {
-                            val intent = Intent(itemView.context, EngYear::class.java)
+                          val intent = Intent(itemView.context, EngYear::class.java)
+                          mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
+                          intent.putExtra(Eng2010Constants.USER_NAME, mUserName)
                             itemView.context.startActivity(intent)
                         }
 
