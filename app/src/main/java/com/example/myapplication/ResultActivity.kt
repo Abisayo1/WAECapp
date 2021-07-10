@@ -12,13 +12,13 @@ class ResultActivity : AppCompatActivity() {
 
     lateinit var preferences: SharedPreferences
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-
-
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+       window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         preferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
@@ -34,6 +34,7 @@ class ResultActivity : AppCompatActivity() {
         score.text = "Your score is $correctAnswer out of $totalQuestions"
 
         btn_result2.setOnClickListener{
+
             startActivity(Intent(this, MainActivity::class.java))
             finish()
     }

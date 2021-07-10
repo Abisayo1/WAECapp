@@ -16,7 +16,7 @@ object Eng2010Constants {
 
         val que1 = Eng2010Obj(
                 id =1,
-                question = "R1.string.Questions",
+                question = "context.getString(com.example.myapplication.R.string.Questions23)",
                 OptionOne = "ugly",
                 OptionTwo = "meagre",
                 OptionThree = "modest",

@@ -1,33 +1,49 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.Typeface
-import android.graphics.drawable.AdaptiveIconDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import android.widget.Toast
-import androidx.core.content.ContextCompat
+import androidx.annotation.Px
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.progressindicator.CircularProgressIndicator
+import kotlinx.android.synthetic.main.activity_eng_obj_essay.*
 import kotlinx.android.synthetic.main.activity_main3.*
 import kotlinx.android.synthetic.main.activity_result.*
 import kotlinx.android.synthetic.main.item_page.*
-import kotlinx.android.synthetic.main.list_item2.*
 import me.relex.circleindicator.CircleIndicator3
 
 class MainActivity3 : AppCompatActivity() //,View.OnClickListener
- {
+{
+
+    private lateinit var viewModel: ViewModelquiz
+
+     var doppelgangerPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+//            Toast.makeText(applicationContext, "Selected position: ${position}",
+//                    Toast.LENGTH_SHORT).show()
+        }
+
+        override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+
+            Toast.makeText(applicationContext, "Selected position: ${position}",
+                    Toast.LENGTH_SHORT).show()
+        }
+
+        }
 
 
-//    private var mCurrentPosition: Int = 1
-//    private var mQuestionsList: ArrayList<Eng2010Obj>? = null
+
+        private var mCurrentPosition: Int = 1
+    private var mQuestionsList: MutableList<englishObj2010>? = null
 //    private var mSelectedOptionPosition: Int = 0
-//    private var mCorrectAnswers: Int = 0
+    private var mCorrectAnswers: Int = 0
+
 //    private var mUserName: String? = null
 
 
@@ -35,19 +51,11 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
 
-
-        var doppelgangerPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                Toast.makeText(applicationContext, "Selected position: ${position}",
-                        Toast.LENGTH_SHORT).show()
-
-            }
-
-        }
+        viewModel = ViewModelProvider(this).get(ViewModelquiz::class.java)
 
 
 
-
+        view_pager2.registerOnPageChangeCallback(doppelgangerPageChangeCallback)
 //        view_pager2.adapter = ViewPagerAdapter(
 //
 //        )
@@ -57,18 +65,20 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 //        indicator.setViewPager(view_pager2)
 
 
-
         val questions = mutableListOf<englishObj2010>(
-             englishObj2010(1,  getString(R.string.Questions), 0, "(A)" + "meagre", "(B)" +"lowly", "(C)" +"love", "(D)" +"babe", 2),
-             englishObj2010(2,  getString(R.string.Questions), 0,"You", "meagre", "lowly", "love", 2),
-             englishObj2010(3, getString(R.string.Questions), 0, "ME", "meagre", "lowly", "love", 2)
-     )
+                englishObj2010(1, getString(R.string.Questions), 0, "(A)" + "meagre", "(B)" + "lowly", "(C)" + "love", "(D)" + "babe", 2, 0),
+                englishObj2010(2, getString(R.string.Questions), 0, "You", "meagre", "lowly", "love", 2, 0),
+                englishObj2010(3, getString(R.string.Questions), 0, "ME", "meagre", "lowly", "love", 2, 0)
+        )
 
-        val adapter = ViewPagerAdapter(questions)
+        val question = mQuestionsList?.get(mCurrentPosition -1)
+        question?.CorrectAnswer
+        val adapter = ViewPagerAdapter(Eng2010Constants.getQuestions())
         view_pager2.adapter = adapter
 
         val indicator = findViewById<CircleIndicator3>(R.id.indicator)
         indicator.setViewPager(view_pager2)
+
 //        view_pager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 //
 //        val indicator = findViewById<CircleIndicator3>(R.id.indicator)
@@ -76,7 +86,7 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 //
 //        mUserName = intent.getStringExtra(Eng2010Constants.USER_NAME)
 //
-//        mQuestionsList = Eng2010Constants.getQuestions()
+
 //        setQuestion()
 //
 //        option1.setOnClickListener(this)
@@ -211,10 +221,21 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 //        tv.background = ContextCompat.getDrawable(this, R.drawable.selected_option_border_bg)
 
 
+
+
+
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        //TODO:6 Unregister page change callback here
+        view_pager2.unregisterOnPageChangeCallback(doppelgangerPageChangeCallback)
+    }
+}
 
- }
+
+
+
 
 
 

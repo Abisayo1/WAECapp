@@ -79,6 +79,7 @@
                 android:layout_margin="10dp"
                 android:text="@{game.answers[0]}"
                 android:textSize="18sp"
+                android:onClick="onRadioButtonClicked"
                 tools:text="Blue" />
 
 
@@ -92,6 +93,7 @@
             android:layout_margin="10dp"
             android:text="@{game.answers[0]}"
             android:textSize="18sp"
+            android:onClick="onRadioButtonClicked"
             tools:text="Blue" />
 
 
@@ -101,6 +103,7 @@
             android:id="@+id/ThirdAnswerRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
             android:layout_margin="10dp"
             android:text="@{game.answers[0]}"
             android:textSize="18sp"
@@ -115,6 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:onClick="onRadioButtonClicked"
             android:text="@{game.answers[0]}"
             android:textSize="18sp"
             tools:text="Blue" />
