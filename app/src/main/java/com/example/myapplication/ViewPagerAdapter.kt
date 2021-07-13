@@ -1,19 +1,14 @@
 package com.example.myapplication
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.CorrectionInfo
 import android.widget.*
-import androidx.lifecycle.Transformations.map
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager
-import kotlinx.android.synthetic.main.item_page.view.*
 
-class ViewPagerAdapter (
-    val list: List<Eng2010Obj>) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
+class ViewPagerAdapter(
+        list1: MainActivity3,
+        val list: List<englishObj2010>) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
 
     inner class Pager2ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemImg: ImageView = itemView.findViewById(R.id.image1)
@@ -98,12 +93,12 @@ class ViewPagerAdapter (
             itemOption4.setOnClickListener { v: View ->
                 val position = adapterPosition
             }
-            button.setOnClickListener {
-                val intent = Intent(itemView.context, ResultActivity::class.java)
-                //intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
-                intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, list!!.size)
-                itemView.context.startActivity(intent)
-            }
+//            button.setOnClickListener {
+//                val intent = Intent(itemView.context, ResultActivity::class.java)
+//                //intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
+//                intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, list!!.size)
+//                itemView.context.startActivity(intent)
+//            }
 
 
         }
