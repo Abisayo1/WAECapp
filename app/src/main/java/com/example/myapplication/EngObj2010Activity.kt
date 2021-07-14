@@ -4,60 +4,50 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.activity_main3.*
-import kotlinx.android.synthetic.main.item_page.*
 import me.relex.circleindicator.CircleIndicator3
 
 class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 {
     private lateinit var liste: ArrayList<englishObj2010>
 
-    private var mCorrectAnswers: Int = 0
+   // private var mCorrectAnswers: Int = 0
     private var nCorrectAnswers: Int = 0
-
 
 
     var doppelgangerPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
+
+
 //            Toast.makeText(applicationContext, "Selected position: ${position}",
 //                    Toast.LENGTH_SHORT).show()
         }
 
         override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            var option1 = liste[position].OptionOne
+            var option2 = liste[position].OptionTwo
+            var option3 = liste[position].OptionThree
+            var option4 = liste[position].OptionFour
 
-            (0..3).forEach { position ->
-                radio_group.setOnCheckedChangeListener(
-                        RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                            val radioButtonID = radio_group.getCheckedRadioButtonId()
-                            val radioButton: View = radio_group.findViewById(radioButtonID);
-                            val idx = radio_group.indexOfChild(radioButton)
-                            val radio: RadioButton = findViewById(checkedId)
-                            if (liste[mCurrentPosition].CorrectAnswer == idx) {
-                                mCorrectAnswers++
-                                Toast.makeText(applicationContext, " On checked change :" +
-                                        " ${mCorrectAnswers}",
-                                        Toast.LENGTH_SHORT).show()
-                            }
-
-                        }
-                )
+            if(ViewPagerAdapter(liste).mCorrectAnswers == 1){
+                Toast.makeText(applicationContext, "Selected position: ${position}",
+                    Toast.LENGTH_SHORT).show()
             }
 
 
-           if (mCorrectAnswers == 1){
-               nCorrectAnswers++
-           }
         }
-
     }
 
 
-    private var mCurrentPosition: Int = 0
-    private var mQuestionsList: MutableList<englishObj2010>? = null
+
+
+
+
+
+
+
 //    private var mSelectedOptionPosition: Int = 0
 
 
@@ -81,12 +71,7 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 //        val indicator = findViewById<CircleIndicator3>(R.id.indicator)
 //        indicator.setViewPager(view_pager2)
 
-        btn_submit23.setOnClickListener {
-                val intent = Intent(this, ResultActivity::class.java)
-                intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, nCorrectAnswers)
-                intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, liste!!.size)
-                startActivity(intent)
-            }
+
     }
 
     private fun loadCards() {
@@ -96,18 +81,18 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
         liste.add(englishObj2010(3, getString(R.string.Questions), 0, "ME", "meagre", "lowly", "love", 2, 0))
 
 
-        val question = mQuestionsList?.get(mCurrentPosition - 1)
-        question?.CorrectAnswer
 
 
 
-        val adapter = ViewPagerAdapter(this, liste)
+        val adapter = ViewPagerAdapter(liste)
         view_pager2.adapter = adapter
 
         val indicator = findViewById<CircleIndicator3>(R.id.indicator)
         indicator.setViewPager(view_pager2)
 
     }
+
+    fun onRadioButtonClicked(view: View) {}
 
 //        view_pager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 //

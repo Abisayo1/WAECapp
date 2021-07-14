@@ -1,14 +1,17 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.item_page.view.*
 
 class ViewPagerAdapter(
-        list1: MainActivity3,
-        val list: List<englishObj2010>) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
+    val list: List<englishObj2010>
+) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
+    var mCorrectAnswers = 0
 
     inner class Pager2ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemImg: ImageView = itemView.findViewById(R.id.image1)
@@ -23,30 +26,42 @@ class ViewPagerAdapter(
         val progressBarText: TextView = itemView.findViewById(R.id.tv_progress)
         var mSelectedOptionPosition: Int = 0
         val item = list[mSelectedOptionPosition]
-        //var mCorrectAnswers = item.score
+        var nCorrectAnswers = 0
+
         //var sum = list.sumBy { it.score }
 
 
         fun defaultView() {
-            // if (mCorrectAnswers == 1) {
-            //     mCorrectAnswers--
+            if (nCorrectAnswers >= 1) {
+                mCorrectAnswers--
+                nCorrectAnswers = 0
+            }
         }
 
 
         init {
-//            itemView.radio_group.setOnCheckedChangeListener(
-//                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-//                    val radioButtonID = itemView.radio_group.getCheckedRadioButtonId()
-//                    val radioButton: View = itemView.radio_group.findViewById(radioButtonID);
-//                    val idx = itemView.radio_group.indexOfChild(radioButton)
-//                    val radio: RadioButton = itemView.findViewById(checkedId)
-//                    if (item!!.CorrectAnswer == idx) {
-//                        mCorrectAnswers++
-//                    }
+            itemView.radio_group.setOnCheckedChangeListener(
+                RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                    val radioButtonID = itemView.radio_group.getCheckedRadioButtonId()
+                    val radioButton: View = itemView.radio_group.findViewById(radioButtonID);
+                    val idx = itemView.radio_group.indexOfChild(radioButton)
+                    val radio: RadioButton = itemView.findViewById(checkedId)
+                    defaultView()
+                    Toast.makeText(itemView.context, " On checked change :" +
+                            " ${mCorrectAnswers}",
+                        Toast.LENGTH_SHORT).show()
+
+                    if (item!!.CorrectAnswer == idx) {
+                        mCorrectAnswers++
+                        nCorrectAnswers++
+                        Toast.makeText(itemView.context, " On checked change :" +
+                            " ${mCorrectAnswers}",
+                        Toast.LENGTH_SHORT).show()
+                    }
 //                    Toast.makeText(itemView.context, " On checked change :" +
 //                            " ${radio.text}",
 //                        Toast.LENGTH_SHORT).show()
-//                })
+                })
 ////                        if (checkedId == R.id.firstAnswerRadioButton) {
 //                            defaultView()
 //                            if (item.CorrectAnswer == 1) {
@@ -93,15 +108,17 @@ class ViewPagerAdapter(
             itemOption4.setOnClickListener { v: View ->
                 val position = adapterPosition
             }
-//            button.setOnClickListener {
-//                val intent = Intent(itemView.context, ResultActivity::class.java)
-//                //intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
-//                intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, list!!.size)
-//                itemView.context.startActivity(intent)
-//            }
+            button.setOnClickListener {
+                val intent = Intent(itemView.context, ResultActivity::class.java)
+                intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, list!!.size)
+                itemView.context.startActivity(intent)
+            }
 
 
         }
+
+
     }
 
 
