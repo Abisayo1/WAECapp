@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main3.*
 import me.relex.circleindicator.CircleIndicator3
 
@@ -60,9 +61,14 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 
         loadCards()
 
+        TabLayoutMediator(tabLayout, view_pager) { tab, position ->
+            //To get the first name of doppelganger celebrities
+            tab.text = "${position + 1}"
+        }.attach()
 
 
-        view_pager2.registerOnPageChangeCallback(doppelgangerPageChangeCallback)
+
+        view_pager.registerOnPageChangeCallback(doppelgangerPageChangeCallback)
 //        view_pager2.adapter = ViewPagerAdapter(
 //
 //        )
@@ -85,10 +91,10 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 
 
         val adapter = ViewPagerAdapter(liste)
-        view_pager2.adapter = adapter
+        view_pager.adapter = adapter
 
-        val indicator = findViewById<CircleIndicator3>(R.id.indicator)
-        indicator.setViewPager(view_pager2)
+//        val indicator = findViewById<CircleIndicator3>(R.id.indicator)
+//        indicator.setViewPager(view_pager)
 
     }
 

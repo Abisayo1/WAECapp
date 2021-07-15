@@ -47,16 +47,16 @@ class ViewPagerAdapter(
                     val idx = itemView.radio_group.indexOfChild(radioButton)
                     val radio: RadioButton = itemView.findViewById(checkedId)
                     defaultView()
-                    Toast.makeText(itemView.context, " On checked change :" +
-                            " ${mCorrectAnswers}",
-                        Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(itemView.context, " On checked change :" +
+//                            " ${mCorrectAnswers}",
+//                        Toast.LENGTH_SHORT).show()
 
                     if (item!!.CorrectAnswer == idx) {
                         mCorrectAnswers++
                         nCorrectAnswers++
-                        Toast.makeText(itemView.context, " On checked change :" +
-                            " ${mCorrectAnswers}",
-                        Toast.LENGTH_SHORT).show()
+//                        Toast.makeText(itemView.context, " On checked change :" +
+//                            " ${mCorrectAnswers}",
+//                        Toast.LENGTH_SHORT).show()
                     }
 //                    Toast.makeText(itemView.context, " On checked change :" +
 //                            " ${radio.text}",
