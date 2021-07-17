@@ -61,7 +61,7 @@ object Eng2010Constants {
 
         val que4 = Eng2010Obj(
                 id =1,
-                question = "${(R1.string.Questions)}",
+                question = "${(R1.string.Question1)}",
                 OptionOne = "ugly",
                 OptionTwo = "meagre",
                 OptionThree = "modest",

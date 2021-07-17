@@ -2,38 +2,31 @@
     <string name="app_name">WAEC PAST QUESTION APP</string>
     <string name="title">Title</string>
 
-    <string name="Questions">
-      <br>
-         1. What is your Favourite food? \n
-      </br>
-      <br>
-         2. Which is your favourite sport?\n
-      </br>
-      <br>
-         3. Whats your bucket list?"
-      </br>
+    <string name="Question1">
+        In each of the following sentences, there is one underlined word and one gap. From the list of words lettered A to D, choose the one that is <b>most nearly opposite</b> in meaning to the underlined word and that will, at the same time, correctly fill the gap in the sentence.
+        \n\n\t 1. The <u>handsome</u> profit from her fish business made Mrs. Uba stop complaining about her husband\'s ............ salary
+
    </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Questions23">  <br>
-         1. What is your Favourite food? \n
-      </br>
-      <br>
-         2. Which is your favourite sport?\n
-      </br>
-      <br>
-         3. Whats your bucket list?"
-      </br></string>
+    <string name="Question2">\t 2. Chief Osa prefers <u>fame</u> in the  village to ....... in the city.</string>
+    <string name="Question3">\t 3. The media houses should employ both the <u>novice</u> and the ....... journalists.</string>
+    <string name="Question4">\t 4. While the registrar considers the matter <u>insignificant,</u>his deputy sees it as ..........</string>
+    <string name="Question5">\t 5. It pays to be <u>firm</u> rather than....... in a case like this.</string>
+    <string name="Question6">\t 6. Usually, Joseph is <u>articulate</u> in his speech, but today, he sounds.........</string>
+    <string name="Question7">\t 7. The man\'s first wife is <u>loyal</u> while the second is .........</string>
+    <string name="Question8">\t 8. Rather than <u>convict</u> him, the impartial judge ......... him.</string>
+    <string name="Question9">\t 9. Instead of <u>reconciling</u> her parents, Roxannce worked hard at .......them. </string>
+    <string name="Question10">\t 10. We thought that Uncle Sam\'s health had<u>improved</u> but it had rather ......... </string>
+    <string name="Question11"><b>SECTION 2:</b> From the words lettered A to D, choose the word that <b>best complete</b> each of the following sentences.\n\n\t 11. One very important aspect of human relationship is .....trust.</string>
+    <string name="Question12">\t 12. The two tasks were performed ......... and we were able to finish early.</string>
+    <string name="Question13">\t 13. The committee is charged with finding a ...... solution to the crisis.</string>
+    <string name="Question14">\t 14. We are worried by the ....... that exists between the two factions of the party.</string>
+    <string name="Question15">\t 15. Our teacher was not speaking ....... when he said that the bursar was under a cloud.</string>
+    <string name="Question16">\t 16. The signature on the document lacked ......., so it was rejected.</string>
+    <string name="Question17">\t 17. everyone could tell that Binta ws happy from the ...... on her face. </string>
+    <string name="Question18">\t 18. His last novel was ....... by his visits to the prisons.</string>
+    <string name="Question19">\t 19. As a result of the power cut, production at the power factory came to a .........,</string>
+    <string name="Question20">\t 20. Several ...... were passed at the meeting.</string>
+    <string name="Question21"><b>SECTION 3:</b> After each of the following sentences, a list of possible interpretations is given. choose the interpretation that you consider <b>most appropriate</b> for each sentence.\n\n\t 21. James and Harry were at daggers drawn when I knew them. This means that they</string>
 
-    <string name="doppelganger_image_path">doppelgangers/%d.jpg</string>
-    <string name="image_loading_error">Problem in loading image</string>
 
-    <string-array name="doppelganger_names">
-        <item>Doguel Jackson</item>
-        <item>Llama Lautner</item>
-        <item>Doggison Ford</item>
-        <item>Dogard Barkson</item>
-        <item>Charlie Catlin</item>
-        <item>Frogonna</item>
-    </string-array>
-</resources>
+    </resources>

@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,7 +7,6 @@ import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main3.*
-import me.relex.circleindicator.CircleIndicator3
 
 class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 {
@@ -82,9 +80,9 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 
     private fun loadCards() {
         liste = ArrayList()
-        liste.add(englishObj2010(1, getString(R.string.Questions), 0, "(A)" + "meagre", "(B)" + "lowly", "(C)" + "love", "(D)" + "babe", 2, 0))
-        liste.add(englishObj2010(2, getString(R.string.Questions), 0, "You", "meagre", "lowly", "love", 2, 0))
-        liste.add(englishObj2010(3, getString(R.string.Questions), 0, "ME", "meagre", "lowly", "love", 2, 0))
+        liste.add(englishObj2010(1, getText(R.string.Question1), 0, "(A)" + "meagre", "(B)" + "lowly", "(C)" + "love", "(D)" + "babe", 2))
+        liste.add(englishObj2010(2, getText(R.string.Question2), 0, "You", "meagre", "lowly", "love", 2))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "ME", "meagre", "lowly", "love", 2))
 
 
 
