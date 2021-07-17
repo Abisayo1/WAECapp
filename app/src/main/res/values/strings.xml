@@ -16,6 +16,7 @@
     <string name="Question8">\t 8. Rather than <u>convict</u> him, the impartial judge ......... him.</string>
     <string name="Question9">\t 9. Instead of <u>reconciling</u> her parents, Roxannce worked hard at .......them. </string>
     <string name="Question10">\t 10. We thought that Uncle Sam\'s health had<u>improved</u> but it had rather ......... </string>
+
     <string name="Question11"><b>SECTION 2:</b> From the words lettered A to D, choose the word that <b>best complete</b> each of the following sentences.\n\n\t 11. One very important aspect of human relationship is .....trust.</string>
     <string name="Question12">\t 12. The two tasks were performed ......... and we were able to finish early.</string>
     <string name="Question13">\t 13. The committee is charged with finding a ...... solution to the crisis.</string>
@@ -26,7 +27,63 @@
     <string name="Question18">\t 18. His last novel was ....... by his visits to the prisons.</string>
     <string name="Question19">\t 19. As a result of the power cut, production at the power factory came to a .........,</string>
     <string name="Question20">\t 20. Several ...... were passed at the meeting.</string>
+
     <string name="Question21"><b>SECTION 3:</b> After each of the following sentences, a list of possible interpretations is given. choose the interpretation that you consider <b>most appropriate</b> for each sentence.\n\n\t 21. James and Harry were at daggers drawn when I knew them. This means that they</string>
+    <string name="Question22">\t 22. My book has become dog-eared through use.</string>
+    <string name="Question23">\t 23. Musa does not believe that there is poverty in Africa; he is a dyed-in-the-wool capitalist. This means that Musa is:</string>
+    <string name="Question24">\t 24. Whenever my cousin comes to realise that I am telling the truth, she will eat the humble pie. This means that my cousin will .....</string>
+    <string name="Question25">\t 25. I had dinner with Tony and Nick and they talked shop the whole time. This means that they talked .....</string>
+    <string name="Question26">\t 26. His decision to reconcile with his former agent paid off. This means that the reconciliation</string>
+    <string name="Question27">\t 27. The beauty of Bimpe\'s garden shows that she has green fingers. This means that Bimpe </string>
+    <string name="Question28">\t 28. I would have visited you but for my father\'s ill health. This means that my</string>
+    <string name="Question29">\t 29. Her husband\'s death has forced her to tighten her belt. This means that she has</string>
+    <string name="Question30">\t 30. Some candidates take examinations in their stride. This means that they:</string>
+    <string name="Question31"><b>SECTION 4:</b> From the words lettered A to D below each of the following sentences, choose the words or group of words that is <b>nearest in meaning</b> to the underlined word as it used in the sentence.\n\n\t 31. The provocation had an <u>instantaneous</u> effect on him. </string>
+    <string name="Question32">\t 32. I woke up feeling rather <u>queer.</u></string>
+    <string name="Question33">\t 33. If he <u>declines</u> the offer, it will be better for him:</string>
+    <string name="Question34">\t 34. Our club encourages <u>benevolence.</u></string>
+    <string name="Question35">\t 35. Such utterance are<u>inimical</u> to the peaceful co-existence of the two communities</string>
+    <string name="Question36">\t 36. The chairman observed that Andrew was the most <u>qualified</u> candidate for the job.</string>
+    <string name="Question37">\t 37. What do you intend to do with these<u>inanimate</u> objects?</string>
+    <string name="Question38">\t 38. Everybody noticed that the chairman\'s excuse was <u>lame.</u></string>
+    <string name="Question39">\t 39. The president appointed <u>staunch</u> supporters of his policies as advisers.</string>
+    <string name="Question40">\t 40. the little boy gave his <u>candid</u> opinion of the incident.</string>
+
+    <string name="Question41"><b>SECTION 5:</b> From the words or group of words lettered A to D, choose the word or group of words that <b>best completes</b> each of the following sentences.\n\n\t 41. Why are you always jealous ..... other people</string>
+    <string name="Question42">\t 42. It is sad that the rich .... pity the poor.</string>
+    <string name="Question43">\t 43. The motorcycle nearly hit Jane and.........</string>
+    <string name="Question44">\t 44. I found my friends sitting ........the beach.</string>
+    <string name="Question45">\t 45. It is about time you ....... to bed.</string>
+    <string name="Question46">\t 46. We shall not ......... WASSCE next May.</string>
+    <string name="Question47">\t 47. One of his close friends ...... a soldier.</string>
+    <string name="Question48">\t 48. Does OMar ........ in the city?</string>
+    <string name="Question49">\t 49. The meeting of the ......... will come later today</string>
+    <string name="Question50">\t 50. His father has a ........</string>
+    <string name="Question51">\t 51. The teachers don\'t teach us,........ </string>
+    <string name="Question52">\t 52. we are no ....... friends</string>
+    <string name="Question53">\t 53. Can you tell us how the accident came .......?</string>
+    <string name="Question54">\t 54. She wondered if the water was not ....... hot for drinking.</string>
+    <string name="Question55">\t 55. The robbers were subjected ....... a thorough beating by the irate mob.</string>
+    <string name="Question56">\t 56. The cook should have ..... the pepper and tomatoes together</string>
+    <string name="Question57">\t 57. My friend would not believe  me if I ....... them this story.</string>
+    <string name="Question58">\t 58. Even before his burial, Okoye\'s family members were already planning how to share his wealth .... themselves.</string>
+    <string name="Question59">\t 59. The principal advised all the students to be of help to .......</string>
+    <string name="Question60">\t 60. Mr. Ackon needed ....... help to succeed in the business.</string>
+    <string name="Question61">\t 61. Susan has been urging me to join the ........</string>
+    <string name="Question62">\t 62. Three kilometers ....... quite a long distance</string>
+    <string name="Question63">\t 63. If they had known us, they ...... </string>
+    <string name="Question64">\t 64. The teacher made us ........ five poems each.</string>
+    <string name="Question65">\t 65. Each one of the ten chosen contestants ...... lunch with the patron.</string>
+    <string name="Question66">\t 66. The teacher needs ........ to write the note on the chalkboard.</string>
+    <string name="Question67">\t 67. Madam Abike turned.......13 bags of maize at the first harvest.</string>
+    <string name="Question68">\t 68. The teacher, as well as his students ........ working very hard.</string>
+    <string name="Question69">\t 69. My mother remarked that it was high time we ....... preparing the supper.</string>
+    <string name="Question70">\t 70. All we need ....... dedicated teachers.</string>
+
+
+
+
+
 
 
     </resources>
