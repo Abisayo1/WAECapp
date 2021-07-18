@@ -19,8 +19,9 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
     var doppelgangerPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
 
-
-//            Toast.makeText(applicationContext, "Selected position: ${position}",
+//            Toast.makeText(applicationContext, "Selected position: ${liste[position].CorrectAnswer}",
+//                    Toast.LENGTH_SHORT).show()
+////            Toast.makeText(applicationContext, "Selected position: ${position}",
 //                    Toast.LENGTH_SHORT).show()
         }
 
@@ -30,14 +31,13 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
             var option3 = liste[position].OptionThree
             var option4 = liste[position].OptionFour
 
-            if(ViewPagerAdapter(liste).mCorrectAnswers == 1){
-                Toast.makeText(applicationContext, "Selected position: ${position}",
-                    Toast.LENGTH_SHORT).show()
+
+
             }
 
 
         }
-    }
+
 
 
 
@@ -80,9 +80,108 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 
     private fun loadCards() {
         liste = ArrayList()
-        liste.add(englishObj2010(1, getText(R.string.Question1), 0, "(A)" + "meagre", "(B)" + "lowly", "(C)" + "love", "(D)" + "babe", 2))
-        liste.add(englishObj2010(2, getText(R.string.Question2), 0, "You", "meagre", "lowly", "love", 2))
-        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "ME", "meagre", "lowly", "love", 2))
+        liste.add(englishObj2010(1, getText(R.string.Question1), 0, "(A)\t ugly", "(B)\t meagre", "(C)\t modest", "(D)\t lowly", 1, 0, null))
+        liste.add(englishObj2010(2, getText(R.string.Question2), 0, "(A)\t neglect", "(B)\t ignorance", "(C)\t poverty", "(D)\t obscurity", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+        liste.add(englishObj2010(3, getText(R.string.Question3), 0, "(A)\t apprentice", "(B)\t probationer", "(C)\t newcomer", "(D)\t veteran", 3, 0, null))
+
 
 
 

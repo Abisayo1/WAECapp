@@ -8,7 +8,9 @@ data class englishObj2010(
         var OptionTwo: String,
         var OptionThree: String,
         var OptionFour: String,
-        var CorrectAnswer: Int
+        var CorrectAnswer: Int,
+        var AnswersImg: Int,
+        var Answers: CharSequence?
 
 
 

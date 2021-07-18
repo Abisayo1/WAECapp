@@ -78,6 +78,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-process:$lifecycle_version")
     // optional - ReactiveStreams support for LiveData
     implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version")
+    implementation 'com.nshmura:recyclertablayout:1.5.0'
 
 
 

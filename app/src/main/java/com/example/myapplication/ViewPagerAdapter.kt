@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.item_page.view.*
 
 class ViewPagerAdapter(
     val list: List<englishObj2010>
+
 ) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
     var mCorrectAnswers = 0
 
@@ -40,28 +41,7 @@ class ViewPagerAdapter(
 
 
         init {
-            itemView.radio_group.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radioButtonID = itemView.radio_group.getCheckedRadioButtonId()
-                    val radioButton: View = itemView.radio_group.findViewById(radioButtonID);
-                    val idx = itemView.radio_group.indexOfChild(radioButton)
-                    val radio: RadioButton = itemView.findViewById(checkedId)
-                    defaultView()
-//                    Toast.makeText(itemView.context, " On checked change :" +
-//                            " ${mCorrectAnswers}",
-//                        Toast.LENGTH_SHORT).show()
 
-                    if (item!!.CorrectAnswer == idx) {
-                        mCorrectAnswers++
-                        nCorrectAnswers++
-//                        Toast.makeText(itemView.context, " On checked change :" +
-//                            " ${mCorrectAnswers}",
-//                        Toast.LENGTH_SHORT).show()
-                    }
-//                    Toast.makeText(itemView.context, " On checked change :" +
-//                            " ${radio.text}",
-//                        Toast.LENGTH_SHORT).show()
-                })
 ////                        if (checkedId == R.id.firstAnswerRadioButton) {
 //                            defaultView()
 //                            if (item.CorrectAnswer == 1) {
@@ -142,6 +122,29 @@ class ViewPagerAdapter(
                 itemOption4.text = item.OptionFour
                 progressBar.progress = item.id
                 progressBarText.text = "${item.id}" + "/" + progressBar.max
+
+                itemView.radio_group.setOnCheckedChangeListener(
+                        RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                            val radioButtonID = itemView.radio_group.getCheckedRadioButtonId()
+                            val radioButton: View = itemView.radio_group.findViewById(radioButtonID);
+                            val idx = itemView.radio_group.indexOfChild(radioButton)
+                            val radio: RadioButton = itemView.findViewById(checkedId)
+                            defaultView()
+//                            Toast.makeText(itemView.context, " On checked change :" +
+//                                    " ${item.CorrectAnswer}",
+//                                    Toast.LENGTH_SHORT).show()
+
+                            if (item.CorrectAnswer == idx) {
+                                mCorrectAnswers++
+                                nCorrectAnswers++
+//                        Toast.makeText(itemView.context, " On checked change :" +
+//                            " ${mCorrectAnswers}",
+//                        Toast.LENGTH_SHORT).show()
+                            }
+//                    Toast.makeText(itemView.context, " On checked change :" +
+//                            " ${radio.text}",
+//                        Toast.LENGTH_SHORT).show()
+                        })
             }
 
 
