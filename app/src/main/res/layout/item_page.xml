@@ -45,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:max="10"/>
+                android:max="100"/>
             <TextView
                 android:id="@+id/tv_progress"
                 android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
                 android:padding="15dp"
                 android:textColorHint="#7A8089"
                 android:textSize="14sp"
-                tools:text="19"/>
+                tools:text="100/100"/>
         </LinearLayout>
 
     <LinearLayout
