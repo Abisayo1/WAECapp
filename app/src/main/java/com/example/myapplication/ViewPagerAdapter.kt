@@ -36,10 +36,6 @@ class ViewPagerAdapter(
         var mSelectedOptionPosition: Int = 0
         val item = list[mSelectedOptionPosition]
         var nCorrectAnswers = 0
-        var one = 0
-        var two = 0
-        var three = 0
-        var four = 0
 
 
         //var sum = list.sumBy { it.score }
@@ -154,11 +150,11 @@ class ViewPagerAdapter(
 //                holder.itemOption4.isChecked = true
 //            }
             holder.apply {
-                itemOption1.isChecked = one == 1
-               itemOption2.isChecked = two == 1
-
-               itemOption3.isChecked = three == 1
-               itemOption4.isChecked = four == 1
+//                itemOption1.isChecked = one == 1
+//               itemOption2.isChecked = two == 1
+//
+//               itemOption3.isChecked = three == 1
+//               itemOption4.isChecked = four == 1
                 itemQuestion.text = item.question
                 itemOption1.text = item.OptionOne
                 itemImg.setImageResource(item.image)
@@ -174,27 +170,7 @@ class ViewPagerAdapter(
                         val radioButton: View = itemView.radio_group.findViewById(radioButtonID);
                         val idx = itemView.radio_group.indexOfChild(radioButton)
                         val radio: RadioButton = itemView.findViewById(checkedId)
-                            if (radio == itemOption1)
-                            {one++
-                            two = 0
-                            three = 0
-                            four = 0}
-                            else if (radio == itemOption2){
-                                one = 0
-                                two++
-                                three = 0
-                                four = 0}
-                            else if (radio == itemOption3){
-                                one = 0
-                                two =0
-                                three++
-                                four = 0}
-                            else if (radio == itemOption4){
-                                one = 0
-                                two = 0
-                                three = 0
-                                four++}
-
+                            defaultView()
 
 
 
@@ -208,9 +184,6 @@ class ViewPagerAdapter(
 //                                radio.isChecked = false
 //                                checkBoxStateArray.put(absoluteAdapterPosition, false)
 //                            }
-                            Toast.makeText(itemView.context, " On checked change :" +
-                                    " ${one}, ${two}, ${three}, ${four}",
-                                    Toast.LENGTH_SHORT).show()
 
                             if (item.CorrectAnswer == idx) {
                                 mCorrectAnswers++
