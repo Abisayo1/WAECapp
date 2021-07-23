@@ -127,34 +127,9 @@ class ViewPagerAdapter(
         }
 
         override fun onBindViewHolder(holder: ViewPagerAdapter.Pager2ViewHolder, position: Int) {
-            //val post = myDataset.get(holder.absoluteAdapterPosition)
             val item = list[position]
-            holder.radio_group.tag = position
 
-
-//            if (!checkBoxStateArray.get(position, false))
-//            {
-//
-//                holder.itemOption1.isChecked = false
-//                holder.itemOption2.isChecked = false
-//                holder.itemOption3.isChecked = false
-//                holder.itemOption4.isChecked = false
-//            }
-//            else
-//            {
-//
-//
-//                holder.itemOption1.isChecked = true
-//                holder.itemOption2.isChecked = true
-//                holder.itemOption3.isChecked = true
-//                holder.itemOption4.isChecked = true
-//            }
             holder.apply {
-//                itemOption1.isChecked = one == 1
-//               itemOption2.isChecked = two == 1
-//
-//               itemOption3.isChecked = three == 1
-//               itemOption4.isChecked = four == 1
                 itemQuestion.text = item.question
                 itemOption1.text = item.OptionOne
                 itemImg.setImageResource(item.image)
@@ -171,19 +146,6 @@ class ViewPagerAdapter(
                         val idx = itemView.radio_group.indexOfChild(radioButton)
                         val radio: RadioButton = itemView.findViewById(checkedId)
                             defaultView()
-
-
-
-//                            if (!checkBoxStateArray.get(absoluteAdapterPosition, false))
-//                            {
-//                                radio.isChecked = true
-//                                checkBoxStateArray.put(absoluteAdapterPosition, true)
-//                            }
-//                            else
-//                            {
-//                                radio.isChecked = false
-//                                checkBoxStateArray.put(absoluteAdapterPosition, false)
-//                            }
 
                             if (item.CorrectAnswer == idx) {
                                 mCorrectAnswers++
