@@ -143,17 +143,18 @@ class ViewPagerAdapter(
                         RadioGroup.OnCheckedChangeListener{ group, checkedId ->
                         val radioButtonID = itemView.radio_group.getCheckedRadioButtonId()
                         val radioButton: View = itemView.radio_group.findViewById(radioButtonID);
-                        val idx = itemView.radio_group.indexOfChild(radioButton)
+                        var idx = itemView.radio_group.indexOfChild(radioButton)
                         val radio: RadioButton = itemView.findViewById(checkedId)
                             defaultView()
+                            var num: Int = idx+ 1
 
-                            if (item.CorrectAnswer == idx) {
+                            if (item.CorrectAnswer == num) {
                                 mCorrectAnswers++
-                                nCorrectAnswers++
-//                        Toast.makeText(itemView.context, " On checked change :" +
-//                            " ${mCorrectAnswers}",
-//                        Toast.LENGTH_SHORT).show()
-                            }
+                                nCorrectAnswers++}
+                        Toast.makeText(itemView.context, " On checked change :" +
+                            " ${num}",
+                        Toast.LENGTH_SHORT).show()
+
 //                    Toast.makeText(itemView.context, " On checked change :" +
 //                            " ${radio.text}",
 //                        Toast.LENGTH_SHORT).show()
