@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Eng2010ObjAns"></activity>
+        <activity android:name=".MainActivity3_eng_obj_2010_ans"></activity>
+        <activity android:name=".Eng2010ObjAns" />
         <activity
             android:name=".ResultActivity"
             android:theme="@style/NoActionBarTheme" />
@@ -18,8 +19,9 @@
         <activity android:name=".EngObjEssay" />
         <activity android:name=".EngYear" />
         <activity android:name=".Subjects" />
-        <activity android:name=".MainActivity3"
-            android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name=".MainActivity3"
+            android:configChanges="orientation|screenSize" />
         <activity android:name=".MainActivity2" />
         <activity
             android:name=".MainActivity"

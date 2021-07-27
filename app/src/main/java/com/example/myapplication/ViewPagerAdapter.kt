@@ -151,6 +151,7 @@ class ViewPagerAdapter(
                             if (item.CorrectAnswer == num) {
                                 mCorrectAnswers++
                                 nCorrectAnswers++}
+
 //                        Toast.makeText(itemView.context, " On checked change :" +
 //                            " ${num}",
 //                        Toast.LENGTH_SHORT).show()

@@ -38,5 +38,10 @@ class ResultActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
     }
+        btn_result.setOnClickListener{
+
+            startActivity(Intent(this, MainActivity3_eng_obj_2010_ans::class.java))
+            finish()
+        }
     }
 }
