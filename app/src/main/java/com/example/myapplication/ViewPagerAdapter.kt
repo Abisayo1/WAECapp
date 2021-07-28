@@ -31,17 +31,110 @@ class ViewPagerAdapter(
         val radio_group: RadioGroup = itemView.findViewById(R.id.radio_group)
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         val progressBarText: TextView = itemView.findViewById(R.id.tv_progress)
-        val rg = radio_group.checkedRadioButtonId
-        val meat = itemView
-        var mSelectedOptionPosition: Int = 0
-        val item = list[mSelectedOptionPosition]
         var nCorrectAnswers = 0
+        var one = 0
+        var two = 0
+        var three = 0
+        var four = 0
+        var five = 0
+        var six = 0
+        var seven = 0
+        var eight = 0
+        var nine = 0
+        var ten = 0
+        var eleven = 0
+        var twelve = 0
+        var thirteen = 0
+        var fourteen = 0
+        var fifteen = 0
+        var sixteen = 0
+        var seventeen = 0
+        var eighteen = 0
+        var nineteen = 0
+        var twenty = 0
+        var twenty_one = 0
+        var twenty_two = 0
+        var twenty_three = 0
+        var twenty_four = 0
+        var twenty_five = 0
+        var twenty_six = 0
+        var twenty_seven = 0
+        var twenty_eight = 0
+        var twenty_nine = 0
+        var thirty = 0
+        var thirty_one = 0
+        var thirty_two = 0
+        var thirty_three = 0
+        var thirty_four = 0
+        var thirty_five = 0
+        var thirty_six = 0
+        var thirty_seven = 0
+        var thirty_eight = 0
+        var thirty_nine = 0
+        var forty = 0
+        var forty_one = 0
+        var forty_two = 0
+        var forty_three = 0
+        var forty_four = 0
+        var fortyFive = 0
+        var fortySix = 0
+        var fortySeven = 0
+        var fortyEight = 0
+        var fortyNine = 0
+        var fifty = 0
+        var fiftyOne = 0
+        var fiftyTwo = 0
+        var fiftyThree = 0
+        var fiftyFour = 0
+        var fiftyFive = 0
+        var fiftySix = 0
+        var fiftySeven = 0
+        var fiftyEight = 0
+        var fiftyNine = 0
+        var sixty = 0
+        var sixtyOne = 0
+        var sixtyTwo = 0
+        var sixtythree = 0
+        var sixtyFour = 0
+        var sixtyFive = 0
+        var sixtySix = 0
+        var sixtySeven = 0
+        var sixtyEight = 0
+        var sixtyNine = 0
+        var seventy = 0
+        var seventyOne = 0
+        var seventyTwo = 0
+        var seventythree = 0
+        var seventyFour = 0
+        var seventyFive = 0
+        var seventySix = 0
+        var seventySeven = 0
+        var seventyEight = 0
+        var seventyNine = 0
+        var eighty = 0
+        var eightyOne = 0
+        var eightyTwo = 0
+        var eightyThree = 0
+        var eightyFour = 0
+        var eightyfive = 0
+        var eightySix = 0
+        var eightySeven = 0
+        var eightyEight = 0
+        var eightyNine = 0
+        var ninety = 0
+        var ninetyOne = 0
+        var ninetyTwo = 0
+        var ninetyThree = 0
+        var ninetyFour = 0
+        var ninetyFive = 0
+        var ninetySix = 0
+        var ninetySeven = 0
+        var ninetyEight = 0
+        var ninetyNine = 0
+        var hundred = 0
 
 
-        //var sum = list.sumBy { it.score }
-
-
-        fun defaultView() {
+         fun defaultView() {
             if (nCorrectAnswers >= 1) {
                 mCorrectAnswers--
                 nCorrectAnswers = 0
@@ -78,25 +171,6 @@ class ViewPagerAdapter(
 //
 //                    })
 
-
-            itemOption1.setOnClickListener { v: View ->
-                val position = adapterPosition
-            }
-
-            fun selectedOption(tv: RadioButton, selectedOptionNum: Int) {
-                mSelectedOptionPosition = selectedOptionNum
-            }
-
-            itemOption2.setOnClickListener { v: View ->
-                val position = adapterPosition
-            }
-
-            itemOption3.setOnClickListener { v: View ->
-                val position = adapterPosition
-            }
-            itemOption4.setOnClickListener { v: View ->
-                val position = adapterPosition
-            }
             button.setOnClickListener {
                 val intent = Intent(itemView.context, ResultActivity::class.java)
                 intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
@@ -151,10 +225,307 @@ class ViewPagerAdapter(
                             if (item.CorrectAnswer == num) {
                                 mCorrectAnswers++
                                 nCorrectAnswers++}
+                            if (item.id == 1){
+                                one = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 3){
+                                three = idx + 1
+                            }
+                            else if (item.id == 4){
+                                four = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
+                            else if (item.id == 2){
+                                two = idx + 1
+                            }
 
-//                        Toast.makeText(itemView.context, " On checked change :" +
-//                            " ${num}",
-//                        Toast.LENGTH_SHORT).show()
+
+
+
+
+                                Toast.makeText(itemView.context, " On checked change :" +
+                            " ${one}, ${two}",
+                        Toast.LENGTH_SHORT).show()
 
 //                    Toast.makeText(itemView.context, " On checked change :" +
 //                            " ${radio.text}",
