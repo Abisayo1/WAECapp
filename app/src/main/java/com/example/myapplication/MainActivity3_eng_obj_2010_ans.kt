@@ -1,19 +1,28 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_main3.*
 import kotlinx.android.synthetic.main.activity_main_activity3_eng_obj_2010_ans.*
-import kotlinx.android.synthetic.main.activity_main_activity3_eng_obj_2010_ans.tabLayout
-import kotlinx.android.synthetic.main.activity_main_activity3_eng_obj_2010_ans.view_pager
 
 class MainActivity3_eng_obj_2010_ans : AppCompatActivity() {
+
+
     private lateinit var liste: ArrayList<englishObj2010>
+    private lateinit var game: ArrayList<Liste>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_activity3_eng_obj_2010_ans)
+        //val number = intent.getIntegerArrayListExtra("lister")
+
+
+        val test = intent.getIntegerArrayListExtra("test")
+        game = ArrayList()
+        game.add(Liste(pickedOptionss = "d$test"))
         loadCards()
+
+//        val listOfCars = mutableListOf<Liste>(
+//                Liste(number))
 
         TabLayoutMediator(tabLayout, view_pager) { tab, position ->
             //To get the first name of doppelganger celebrities
@@ -21,7 +30,9 @@ class MainActivity3_eng_obj_2010_ans : AppCompatActivity() {
         }.attach()
     }
 
+
     private fun loadCards() {
+
         liste = ArrayList()
         liste.add(englishObj2010(1, getText(R.string.Question1), 0, "(A)\t ugly", "(B)\t meagre", "(C)\t modest", "(D)\t lowly", 2, 0, null))
         liste.add(englishObj2010(2, getText(R.string.Question2), 0, "(A)\t neglect", "(B)\t ignorance", "(C)\t poverty", "(D)\t obscurity", 4, 0, null))
@@ -130,7 +141,7 @@ class MainActivity3_eng_obj_2010_ans : AppCompatActivity() {
 
 
 
-        val adapter = ViewPagerEng2010ObjAns(liste)
+        val adapter = ViewPagerEng2010ObjAns(liste, game)
         view_pager.adapter = adapter
 
 //        val indicator = findViewById<CircleIndicator3>(R.id.indicator)

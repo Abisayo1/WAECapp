@@ -3,6 +3,7 @@
     package="com.example.myapplication">
 
     <application
+        android:name=".GlobalClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,7 +16,7 @@
         <activity
             android:name=".ResultActivity"
             android:theme="@style/NoActionBarTheme" />
-        <activity android:name=".ActivityFragment" />
+
         <activity android:name=".EngObjEssay" />
         <activity android:name=".EngYear" />
         <activity android:name=".Subjects" />

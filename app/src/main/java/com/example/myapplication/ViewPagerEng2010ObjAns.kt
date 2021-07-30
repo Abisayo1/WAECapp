@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +14,9 @@ import kotlinx.android.synthetic.main.item_page_obj_eng10_ans.view.*
 
 
 class ViewPagerEng2010ObjAns(
-    val list: List<englishObj2010>
+    val list: List<englishObj2010>,
+    val list2: List<Liste>
+
 
 
 ) : RecyclerView.Adapter<ViewPagerEng2010ObjAns.Pager2ViewHolder>() {
@@ -25,21 +29,17 @@ class ViewPagerEng2010ObjAns(
         val itemOption2: RadioButton = itemView.findViewById(R.id.SecondAnswerRadioButton1)
         val itemOption3: RadioButton = itemView.findViewById(R.id.ThirdAnswerRadioButton1)
         val itemOption4: RadioButton = itemView.findViewById(R.id.FourthAnswerRadioButton1)
-        val button: Button = itemView.findViewById(R.id.btn_submit)
+        val button: Button = itemView.findViewById(R.id.btn_submit1)
         val radio_group: RadioGroup = itemView.findViewById(R.id.radio_group)
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         val progressBarText: TextView = itemView.findViewById(R.id.tv_progress)
 
-
-
         init {
+
 
         }
 
-
     }
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerEng2010ObjAns.Pager2ViewHolder {
         return Pager2ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_page_obj_eng10_ans, parent, false))
 
@@ -57,8 +57,11 @@ class ViewPagerEng2010ObjAns(
 
     override fun onBindViewHolder(holder: ViewPagerEng2010ObjAns.Pager2ViewHolder, position: Int) {
         val item = list[position]
+        val items = list2[position]
 
         holder.apply {
+
+
 
             itemQuestion.text = item.question
 
@@ -75,6 +78,8 @@ class ViewPagerEng2010ObjAns(
                 holder.itemOption4.setBackgroundResource(R.drawable.correct_option_border_bg)
             }
 
+
+
             itemOption1.text = item.OptionOne
             itemImg.setImageResource(item.image)
             itemOption2.text = item.OptionTwo
@@ -82,6 +87,11 @@ class ViewPagerEng2010ObjAns(
             itemOption4.text = item.OptionFour
             progressBar.progress = item.id
             progressBarText.text = "${item.id}" + "/" + progressBar.max
+            button.setOnClickListener {
+                Toast.makeText(itemView.context, " On checked change :" +
+                        "  ${items.pickedOptionss}",
+                        Toast.LENGTH_SHORT).show()
+                        }
 
 
         }
@@ -89,6 +99,7 @@ class ViewPagerEng2010ObjAns(
 
     }
 }
+
 
 
 

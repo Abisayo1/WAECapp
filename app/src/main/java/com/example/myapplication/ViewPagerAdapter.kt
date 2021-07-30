@@ -15,6 +15,10 @@ class ViewPagerAdapter(
 
 ) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
     var mCorrectAnswers = 0
+    private var lister: MutableList<Int> = arrayListOf()
+
+
+
 //    var checkBoxStateArray = SparseBooleanArray()
 //    var checkBoxStateArray2 = SparseBooleanArray()
 
@@ -32,6 +36,8 @@ class ViewPagerAdapter(
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         val progressBarText: TextView = itemView.findViewById(R.id.tv_progress)
         var nCorrectAnswers = 0
+        var globalVariable = GlobalClass()
+        val team = globalVariable.One
         var one = 0
         var two = 0
         var three = 0
@@ -174,6 +180,8 @@ class ViewPagerAdapter(
             button.setOnClickListener {
                 val intent = Intent(itemView.context, ResultActivity::class.java)
                 intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                //intent.putIntegerArrayListExtra("lister", ArrayList(lister))
+                intent.putIntegerArrayListExtra("lister", lister as ArrayList<Int?>?)
                 intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, list!!.size)
                 itemView.context.startActivity(intent)
             }
@@ -226,28 +234,28 @@ class ViewPagerAdapter(
                                 mCorrectAnswers++
                                 nCorrectAnswers++}
                             if (item.id == 1){
-                                one = idx + 1
+                                lister.add(0, idx +1)
                             }
                             else if (item.id == 2){
-                                two = idx + 1
+                                lister.add(1, idx +1)
                             }
                             else if (item.id == 3){
-                                three = idx + 1
+                                lister.add(2, idx +1)
                             }
                             else if (item.id == 4){
-                                four = idx + 1
+                                lister.add(3, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 5){
+                                lister.add(4, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 6){
+                                lister.add(5, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 7){
+                                lister.add(6, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 8){
+                                lister.add(7, idx +1)
                             }
                             else if (item.id == 2){
                                 two = idx + 1
@@ -524,7 +532,7 @@ class ViewPagerAdapter(
 
 
                                 Toast.makeText(itemView.context, " On checked change :" +
-                            " ${one}, ${two}",
+                            " ${one}, ${lister[0]}",
                         Toast.LENGTH_SHORT).show()
 
 //                    Toast.makeText(itemView.context, " On checked change :" +
