@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_result.*
 class ResultActivity : AppCompatActivity() {
 
     lateinit var preferences: SharedPreferences
+    var array: ArrayList<Int>? = null
 
 
 
@@ -31,7 +32,7 @@ class ResultActivity : AppCompatActivity() {
 
         val totalQuestions = intent.getIntExtra(Eng2010Constants.TOTAL_QUESTIONS, 0)
         val correctAnswer = intent.getIntExtra(Eng2010Constants.CORRECT_ANSWERS, 0)
-        val number = intent.getIntegerArrayListExtra("lister")
+        array = intent.getIntegerArrayListExtra(Eng2010Constants.ONE)
 
 
 
@@ -40,7 +41,7 @@ class ResultActivity : AppCompatActivity() {
         btn_result2.setOnClickListener{
 
             Toast.makeText(this, " On checked change :" +
-                    "  $number",
+                    "  $array",
                     Toast.LENGTH_SHORT).show()
 
             startActivity(Intent(this, MainActivity::class.java))
@@ -48,9 +49,9 @@ class ResultActivity : AppCompatActivity() {
     }
         btn_result.setOnClickListener{
 
-            val Intent = Intent(this, MainActivity3_eng_obj_2010_ans::class.java)
-            intent.putExtra("test", number)
-            startActivity(Intent)
+            val intent = Intent(this, MainActivity3_eng_obj_2010_ans::class.java)
+            intent.putExtra(Eng2010Constants.ONE, array)
+            startActivity(intent)
             finish()
 
         }

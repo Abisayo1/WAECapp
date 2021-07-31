@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +16,9 @@ class ViewPagerAdapter(
 
 ) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
     var mCorrectAnswers = 0
-    private var lister: MutableList<Int> = arrayListOf()
+    private var lister: MutableList<Int> = arrayListOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+
+
 
 
 
@@ -181,7 +184,7 @@ class ViewPagerAdapter(
                 val intent = Intent(itemView.context, ResultActivity::class.java)
                 intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, mCorrectAnswers)
                 //intent.putIntegerArrayListExtra("lister", ArrayList(lister))
-                intent.putIntegerArrayListExtra("lister", lister as ArrayList<Int?>?)
+                intent.putExtra(Eng2010Constants.ONE, lister as ArrayList<Int?>?)
                 intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, list!!.size)
                 itemView.context.startActivity(intent)
             }

@@ -4,7 +4,7 @@ import java.util.ArrayList
 
 
 data class Liste(
-        var pickedOptionss: String
+    var pickedOptionss: ArrayList<Int>? = arrayListOf<Int>(0,1,2,3,4,5,6,7,8,9,0)
 
 
 

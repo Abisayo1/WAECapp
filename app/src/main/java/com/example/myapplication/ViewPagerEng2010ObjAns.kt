@@ -19,7 +19,9 @@ class ViewPagerEng2010ObjAns(
 
 
 
+
 ) : RecyclerView.Adapter<ViewPagerEng2010ObjAns.Pager2ViewHolder>() {
+    var game: Int = 0
 
 
     inner class Pager2ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -56,14 +58,39 @@ class ViewPagerEng2010ObjAns(
     }
 
     override fun onBindViewHolder(holder: ViewPagerEng2010ObjAns.Pager2ViewHolder, position: Int) {
-        val item = list[position]
-        val items = list2[position]
+        val item = list[position!!]
+        val items = list2[position!!]
 
         holder.apply {
 
 
 
             itemQuestion.text = item.question
+
+            if (items.pickedOptionss?.getOrElse(position) {0} == 1){
+                holder.itemOption1.setBackgroundResource(R.drawable.wrong_option_border_bg)
+            }
+            else if (
+                items.pickedOptionss?.getOrElse(position) {0} == 2
+                    ){
+                holder.itemOption2.setBackgroundResource(R.drawable.wrong_option_border_bg)
+            }
+            else if (
+                items.pickedOptionss?.getOrElse(position) {0} == 3
+            ){
+                holder.itemOption3.setBackgroundResource(R.drawable.wrong_option_border_bg)
+            }
+            else if (
+                items.pickedOptionss?.getOrElse(position) {0} == 4
+            ){
+                holder.itemOption4.setBackgroundResource(R.drawable.wrong_option_border_bg)
+            }
+            else if (items.pickedOptionss?.getOrElse(position) {0} == 0) {
+                game++
+                game -1
+            }
+
+
 
             if (item.CorrectAnswer == 1){
                 holder.itemOption1.setBackgroundResource(R.drawable.correct_option_border_bg)
