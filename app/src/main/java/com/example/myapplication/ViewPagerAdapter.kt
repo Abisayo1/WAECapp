@@ -41,106 +41,7 @@ class ViewPagerAdapter(
         var nCorrectAnswers = 0
         var globalVariable = GlobalClass()
         val team = globalVariable.One
-        var one = 0
-        var two = 0
-        var three = 0
-        var four = 0
-        var five = 0
-        var six = 0
-        var seven = 0
-        var eight = 0
-        var nine = 0
-        var ten = 0
-        var eleven = 0
-        var twelve = 0
-        var thirteen = 0
-        var fourteen = 0
-        var fifteen = 0
-        var sixteen = 0
-        var seventeen = 0
-        var eighteen = 0
-        var nineteen = 0
-        var twenty = 0
-        var twenty_one = 0
-        var twenty_two = 0
-        var twenty_three = 0
-        var twenty_four = 0
-        var twenty_five = 0
-        var twenty_six = 0
-        var twenty_seven = 0
-        var twenty_eight = 0
-        var twenty_nine = 0
-        var thirty = 0
-        var thirty_one = 0
-        var thirty_two = 0
-        var thirty_three = 0
-        var thirty_four = 0
-        var thirty_five = 0
-        var thirty_six = 0
-        var thirty_seven = 0
-        var thirty_eight = 0
-        var thirty_nine = 0
-        var forty = 0
-        var forty_one = 0
-        var forty_two = 0
-        var forty_three = 0
-        var forty_four = 0
-        var fortyFive = 0
-        var fortySix = 0
-        var fortySeven = 0
-        var fortyEight = 0
-        var fortyNine = 0
-        var fifty = 0
-        var fiftyOne = 0
-        var fiftyTwo = 0
-        var fiftyThree = 0
-        var fiftyFour = 0
-        var fiftyFive = 0
-        var fiftySix = 0
-        var fiftySeven = 0
-        var fiftyEight = 0
-        var fiftyNine = 0
-        var sixty = 0
-        var sixtyOne = 0
-        var sixtyTwo = 0
-        var sixtythree = 0
-        var sixtyFour = 0
-        var sixtyFive = 0
-        var sixtySix = 0
-        var sixtySeven = 0
-        var sixtyEight = 0
-        var sixtyNine = 0
-        var seventy = 0
-        var seventyOne = 0
-        var seventyTwo = 0
-        var seventythree = 0
-        var seventyFour = 0
-        var seventyFive = 0
-        var seventySix = 0
-        var seventySeven = 0
-        var seventyEight = 0
-        var seventyNine = 0
-        var eighty = 0
-        var eightyOne = 0
-        var eightyTwo = 0
-        var eightyThree = 0
-        var eightyFour = 0
-        var eightyfive = 0
-        var eightySix = 0
-        var eightySeven = 0
-        var eightyEight = 0
-        var eightyNine = 0
-        var ninety = 0
-        var ninetyOne = 0
-        var ninetyTwo = 0
-        var ninetyThree = 0
-        var ninetyFour = 0
-        var ninetyFive = 0
-        var ninetySix = 0
-        var ninetySeven = 0
-        var ninetyEight = 0
-        var ninetyNine = 0
-        var hundred = 0
+
 
 
          fun defaultView() {
@@ -260,283 +161,295 @@ class ViewPagerAdapter(
                             else if (item.id == 8){
                                 lister.add(7, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 9){
+                                lister.add(8, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 10){
+                                lister.add(9, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 11){
+                                lister.add(10, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 12){
+                                lister.add(11, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 13){
+                                lister.add(12, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 14){
+                                lister.add(13, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 15){
+                                lister.add(14, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 16){
+                                lister.add(15, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 17){
+                                lister.add(16, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 18){
+                                lister.add(17, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 19){
+                                lister.add(18, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 20){
+                                lister.add(19, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 21){
+                                lister.add(20, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 22){
+                                lister.add(21, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 23){
+                                lister.add(22, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 24){
+                                lister.add(23, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 25){
+                                lister.add(24, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 26){
+                                lister.add(25, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 27){
+                                lister.add(26, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 28){
+                                lister.add(27, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 29){
+                                lister.add(28, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 30){
+                                lister.add(29, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 31){
+                                lister.add(30, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 32){
+                                lister.add(31, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 33){
+                                lister.add(32, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 34){
+                                lister.add(33, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 35){
+                                lister.add(34, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 36){
+                                lister.add(35, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 37){
+                                lister.add(36, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 38){
+                                lister.add(37, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 39){
+                                lister.add(38, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 40){
+                                lister.add(39, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 41){
+                                lister.add(40, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 42){
+                                lister.add(41, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 43){
+                                lister.add(42, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 44){
+                                lister.add(43, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 45){
+                                lister.add(44, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 46){
+                                lister.add(45, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 47){
+                                lister.add(46, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 48){
+                                lister.add(47, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 49){
+                                lister.add(48, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 50){
+                                lister.add(49, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 51){
+                                lister.add(50, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 52){
+                                lister.add(51, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 53){
+                                lister.add(52, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 54){
+                                lister.add(53, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 55){
+                                lister.add(54, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 56){
+                                lister.add(55, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 57){
+                                lister.add(56, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 58){
+                                lister.add(57, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 59){
+                                lister.add(58, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 60){
+                                lister.add(59, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 61){
+                                lister.add(60, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 62){
+                                lister.add(61, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 63){
+                                lister.add(62, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 64){
+                                lister.add(63, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 65){
+                                lister.add(64, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 66){
+                                lister.add(65, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 67){
+                                lister.add(66, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 68){
+                                lister.add(67, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 69){
+                                lister.add(68, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 70){
+                                lister.add(69, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 71){
+                                lister.add(70, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 72){
+                                lister.add(71, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 73){
+                                lister.add(72, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 74){
+                                lister.add(73, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 75){
+                                lister.add(74, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 76){
+                                lister.add(75, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 77){
+                                lister.add(76, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 78){
+                                lister.add(77, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 79){
+                                lister.add(78, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 80){
+                                lister.add(79, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
-                            }else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 81){
+                                lister.add(80, idx +1)
+                            }else if (item.id == 82){
+                                lister.add(81, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 83){
+                                lister.add(82, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 83){
+                                lister.add(82, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 84){
+                                lister.add(83, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 85){
+                                lister.add(84, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 86){
+                                lister.add(85, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 87){
+                                lister.add(86, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 88){
+                                lister.add(87, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 89){
+                                lister.add(88, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 90){
+                                lister.add(89, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 91){
+                                lister.add(90, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 92){
+                                lister.add(91, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 93){
+                                lister.add(92, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 94){
+                                lister.add(93, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 95){
+                                lister.add(94, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 96){
+                                lister.add(95, idx +1)
                             }
-                            else if (item.id == 2){
-                                two = idx + 1
+                            else if (item.id == 97){
+                                lister.add(96, idx +1)
+                            }
+                            else if (item.id == 98){
+                                lister.add(97, idx +1)
+                            }
+                            else if (item.id == 99){
+                                lister.add(98, idx +1)
+                            }
+
+                            else if (item.id == 100){
+                                lister.add(99, idx +1)
                             }
 
 
 
-
-
-                                Toast.makeText(itemView.context, " On checked change :" +
-                            " ${one}, ${lister[0]}",
-                        Toast.LENGTH_SHORT).show()
+//
+//
+//
+//
+//                                Toast.makeText(itemView.context, " On checked change :" +
+//                            " ${one}, ${lister[0]}",
+//                        Toast.LENGTH_SHORT).show()
 
 //                    Toast.makeText(itemView.context, " On checked change :" +
 //                            " ${radio.text}",

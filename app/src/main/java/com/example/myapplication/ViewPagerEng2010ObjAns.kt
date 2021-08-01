@@ -31,8 +31,7 @@ class ViewPagerEng2010ObjAns(
         val itemOption2: RadioButton = itemView.findViewById(R.id.SecondAnswerRadioButton1)
         val itemOption3: RadioButton = itemView.findViewById(R.id.ThirdAnswerRadioButton1)
         val itemOption4: RadioButton = itemView.findViewById(R.id.FourthAnswerRadioButton1)
-        val button: Button = itemView.findViewById(R.id.btn_submit1)
-        val radio_group: RadioGroup = itemView.findViewById(R.id.radio_group)
+        val text1: TextView = itemView.findViewById(R.id.info)
         val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         val progressBarText: TextView = itemView.findViewById(R.id.tv_progress)
 
@@ -69,21 +68,27 @@ class ViewPagerEng2010ObjAns(
 
             if (items.pickedOptionss?.getOrElse(position) {0} == 1){
                 holder.itemOption1.setBackgroundResource(R.drawable.wrong_option_border_bg)
+                holder.text1.text = "You chose option ${itemOption1.text}"
+
             }
             else if (
                 items.pickedOptionss?.getOrElse(position) {0} == 2
                     ){
                 holder.itemOption2.setBackgroundResource(R.drawable.wrong_option_border_bg)
+                holder.text1.text = "You chose option ${itemOption2.text}"
             }
             else if (
                 items.pickedOptionss?.getOrElse(position) {0} == 3
             ){
                 holder.itemOption3.setBackgroundResource(R.drawable.wrong_option_border_bg)
+                holder.text1.text = "You chose option ${itemOption3.text}"
+
             }
             else if (
                 items.pickedOptionss?.getOrElse(position) {0} == 4
             ){
                 holder.itemOption4.setBackgroundResource(R.drawable.wrong_option_border_bg)
+                holder.text1.text = "You chose option ${itemOption3.text}"
             }
             else if (items.pickedOptionss?.getOrElse(position) {0} == 0) {
                 game++
@@ -114,11 +119,6 @@ class ViewPagerEng2010ObjAns(
             itemOption4.text = item.OptionFour
             progressBar.progress = item.id
             progressBarText.text = "${item.id}" + "/" + progressBar.max
-            button.setOnClickListener {
-                Toast.makeText(itemView.context, " On checked change :" +
-                        "  ${items.pickedOptionss}",
-                        Toast.LENGTH_SHORT).show()
-                        }
 
 
         }
