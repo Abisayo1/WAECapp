@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 editor.putString("NAME", insertedText)
                 editor.apply()
 
-                val intent = Intent(this, MainActivity2::class.java)
+                val intent = Intent(this, MainActivity3::class.java)
 //                intent.putExtra(Eng2010Constants.USER_NAME, et_name.text.toString())
                 startActivity(intent)
 

@@ -11,12 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity3_eng_obj_2010_ans"/>
+        <activity
+            android:name=".Learning"
+            android:exported="false" />
+        <activity
+            android:name=".TextToSpeech"
+            android:exported="false" />
+        <activity android:name=".MainActivity3_eng_obj_2010_ans" />
         <activity android:name=".Eng2010ObjAns" />
         <activity
             android:name=".ResultActivity"
             android:theme="@style/NoActionBarTheme" />
-
         <activity android:name=".EngObjEssay" />
         <activity android:name=".EngYear" />
         <activity android:name=".Subjects" />

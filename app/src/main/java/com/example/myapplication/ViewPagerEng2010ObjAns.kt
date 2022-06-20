@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_page.view.*
-import kotlinx.android.synthetic.main.item_page.view.firstAnswerRadioButton
-import kotlinx.android.synthetic.main.item_page.view.radio_group
 import kotlinx.android.synthetic.main.item_page_obj_eng10_ans.view.*
 
 

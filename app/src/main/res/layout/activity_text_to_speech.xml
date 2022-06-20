@@ -6,53 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/question"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/question1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textSize="42sp"
-        android:gravity="center"
-        android:textColor="@color/purple_500"
-        android:text="Consonant Sounds"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </TextView>
-
-    <TextView
-        android:id="@+id/question123"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="center"
-        android:text="This is it"
-        android:textSize="42sp"
-        app:layout_constraintEnd_toEndOf="@id/question"
-        app:layout_constraintStart_toStartOf="@id/question"
-        app:layout_constraintTop_toTopOf="@id/question">
-
-    </TextView>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fabPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"
         android:text="Play"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question123" />
+        app:layout_constraintTop_toBottomOf="@+id/question1"
+        android:gravity="center_horizontal" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_keyboard_voice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
