@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.media.MediaPlayer
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +12,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.viewpager2.widget.ViewPager2
-import com.example.myapplication.databinding.ItemPageBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main3.*
 import me.relex.circleindicator.CircleIndicator3
@@ -20,6 +20,7 @@ import kotlin.collections.ArrayList
 
 class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 {
+    var mMediaPlayer: MediaPlayer? = null
     private lateinit var liste: ArrayList<englishObj2010>
 
     // private var mCorrectAnswers: Int = 0
@@ -37,25 +38,10 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 
         override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
             var option1 = liste[position].OptionOne
-            var option2 = liste[position].OptionTwo
-            var option3 = liste[position].OptionThree
-            var option4 = liste[position].OptionFour
-
-
 
         }
 
-
     }
-
-
-
-
-
-
-
-
-
 
 //    private var mSelectedOptionPosition: Int = 0
 
@@ -84,7 +70,9 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 //
 //        val indicator = findViewById<CircleIndicator3>(R.id.indicator)
 //        indicator.setViewPager(view_pager2)
-
+                    playSound()
+        reduceVolume()
+        reduceVolume()
 
     }
     private fun loadCards() {
@@ -93,30 +81,163 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
             englishObj2010(
                 1,
                 getText(R.string.Question1),
-                0,
-                "(A)\t ugly",
-                "(B)\t meagre",
-                "(C)\t modest",
-                "(D)\t lowly",
-                2,
-                0,
-                null
+                "/f/ as in:"
+
             )
         )
         liste.add(
             englishObj2010(
                 2,
                 getText(R.string.Question2),
-                0,
-                "(A)\t neglect",
-                "(B)\t ignorance",
-                "(C)\t poverty",
-                "(D)\t obscurity",
-                4,
-                0,
-                null
+                "/v/ as in:"
+
             )
         )
+        liste.add(
+            englishObj2010(
+                3,
+                "Thought, think, Bath.",
+                "/θ/ as in:"
+
+            )
+            )
+
+        liste.add(
+            englishObj2010(
+                4,
+                "There, those, brothers, others",
+                "/ð/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                5,
+                "Zoo, crazy, lazy, zigzag, nose",
+                "/z/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                6,
+                "Shirt, rush, shop, cash",
+                "/ʃ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                7,
+                "Television, delusion, casual ",
+                "/ʒ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                8,
+                "High, help, hello",
+                "/h/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                9,
+                "Pin, cap, purpose, pause",
+                "/p/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                10,
+                "Bag, bubble, build, robe.",
+                "/b/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                11,
+                "Time, train, tow, late.",
+                "/t/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                12,
+                "Door, day, drive, down, feed.",
+                "/d/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                13,
+                "Cash, quick, cricket, sock.",
+                "/k/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                14,
+                "Girl, green, grass, flag.",
+                "/g/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                10,
+                "Bag, bubble, build, robe.",
+                "/b/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                10,
+                "Bag, bubble, build, robe.",
+                "/b/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                10,
+                "Bag, bubble, build, robe.",
+                "/b/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                10,
+                "Bag, bubble, build, robe.",
+                "/b/ as in:"
+
+            )
+        )
+
+
 
 
         val adapter = ViewPagerAdapter(liste)
@@ -126,8 +247,46 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 //        indicator.setViewPager(view_pager)
 
     }
+    fun reduceVolume() {
+    val volume = - 0.1
+        mMediaPlayer?.setVolume(volume.toFloat(), volume.toFloat());
+}
+
+
 
     fun onRadioButtonClicked(view: View) {}
+
+    // 1. Plays the water sound
+    fun playSound() {
+        if (mMediaPlayer == null) {
+            mMediaPlayer = MediaPlayer.create(this, R.raw.funny_story)
+            mMediaPlayer!!.isLooping = true
+            mMediaPlayer!!.start()
+        } else mMediaPlayer!!.start()
+    }
+
+    // 2. Pause playback
+    fun pauseSound() {
+        if (mMediaPlayer?.isPlaying == true) mMediaPlayer?.pause()
+    }
+
+    // 3. Stops playback
+    fun stopSound() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.stop()
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
+
+    // 4. Destroys the MediaPlayer instance when the app is closed
+    override fun onStop() {
+        super.onStop()
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
 }
 
 

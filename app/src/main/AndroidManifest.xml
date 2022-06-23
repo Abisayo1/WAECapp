@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <meta-data
+        android:name="preloaded_fonts"
+        android:resource="@array/preloaded_fonts" />
+
     <application
         android:name=".GlobalClass"
         android:allowBackup="true"
@@ -11,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Welcome"
+            android:exported="false" />
         <activity
             android:name=".Learning"
             android:exported="false" />
@@ -31,6 +38,7 @@
         <activity android:name=".MainActivity2" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -39,6 +47,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

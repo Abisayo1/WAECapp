@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">WAEC PAST QUESTION APP</string>
+    <string name="app_name">Espoir</string>
     <string name="title">Title</string>
 
-    <string name="Question1">/tʃ/ as in chain
+    <string name="Question1">Full, Friday, fish, knife.
 
    </string>
-    <string name="Question2">\t 2. Chief Osa prefers <u>fame</u> in the  village to ....... in the city.</string>
+    <string name="Question2"> Vest, village, view, cave. </string>
     <string name="Question3">\t 3. The media houses should employ both the <u>novice</u> and the ....... journalists.</string>
     <string name="Question4">\t 4. While the registrar considers the matter <u>insignificant,</u>his deputy sees it as ..........</string>
     <string name="Question5">\t 5. It pays to be <u>firm</u> rather than....... in a case like this.</string>

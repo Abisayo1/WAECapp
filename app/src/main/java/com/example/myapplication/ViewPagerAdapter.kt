@@ -28,10 +28,108 @@ class ViewPagerAdapter(
 ) : RecyclerView.Adapter<ViewPagerAdapter.Pager2ViewHolder>() {
     var mCorrectAnswers = 0
     lateinit var tts: TextToSpeech
-    private var lister: MutableList<Int> = arrayListOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
-
-
-
+    private var lister: MutableList<Int> = arrayListOf(
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    )
 
 
 //    var checkBoxStateArray = SparseBooleanArray()
@@ -40,14 +138,16 @@ class ViewPagerAdapter(
 
     inner class Pager2ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //private var checkedRadioButton: CompoundButton? = null
-        val itemQuestion: TextView = itemView.findViewById(R.id.question123)
+        val itemQuestion: TextView = itemView.findViewById(R.id.question12)
+        val itemQuestions: TextView = itemView.findViewById(R.id.question123)
+        val itemQuestion8: TextView = itemView.findViewById(R.id.question8)
         val button: Button = itemView.findViewById(R.id.fabPlay)
+
         //val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         //val progressBarText: TextView = itemView.findViewById(R.id.tv_progress)
         var nCorrectAnswers = 0
         var globalVariable = GlobalClass()
         val team = globalVariable.One
-
 
 
         fun defaultView() {
@@ -88,14 +188,17 @@ class ViewPagerAdapter(
 //                    })
 
 
-
             button.setOnClickListener {
                 tts = TextToSpeech(itemView.context, TextToSpeech.OnInitListener {
-                    if (it==TextToSpeech.SUCCESS) {
+                    if (it == TextToSpeech.SUCCESS) {
 
                         tts.language = Locale.UK
                         tts.setSpeechRate(1.0f)
-                        tts.speak(itemQuestion.text?.trim().toString(), TextToSpeech.QUEUE_ADD, null)
+                        tts.speak(
+                            itemQuestion.text?.trim().toString(),
+                            TextToSpeech.QUEUE_ADD,
+                            null
+                        )
                     }
                 })
             }
@@ -107,10 +210,16 @@ class ViewPagerAdapter(
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerAdapter.Pager2ViewHolder {
-        return Pager2ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_page, parent, false))
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewPagerAdapter.Pager2ViewHolder {
+        return Pager2ViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.item_page, parent, false)
+        )
 
     }
+
     override fun getItemId(position: Int): Long {
         return position.toLong()
     }
@@ -118,19 +227,26 @@ class ViewPagerAdapter(
     override fun getItemViewType(position: Int): Int {
         return position
     }
+
     override fun getItemCount(): Int {
         return list.size
     }
 
     override fun onBindViewHolder(holder: ViewPagerAdapter.Pager2ViewHolder, position: Int) {
-        val item = list[position]
+        var item = list[position]
 
         holder.apply {
             itemQuestion.text = item.question
+            itemQuestions.text = item.OptionOne
+
+            if (position >= 7) {
+                itemQuestion8.text = "Consonants Sounds: Plosives"
+            } else if (position >= 14 )
+            {
+                itemQuestion8.text = "Consonants Sounds: Affricates"
+            }
 
 
         }
-
-
     }
 }

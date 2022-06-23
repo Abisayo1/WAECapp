@@ -3,6 +3,8 @@
     <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
+        <item name="android:fontFamily">@font/amiko</item>
+        <item name="fontFamily">@font/amiko</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -17,6 +19,8 @@
     <style name="NoActionBarTheme" parent = "Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">@color/purple_500</item>
+        <item name="android:fontFamily">@font/amiko</item>
+        <item name="fontFamily">@font/amiko</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
