@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothStatusCodes.SUCCESS
 import android.content.Context
 import android.content.Intent
@@ -10,6 +11,7 @@ import android.os.Build
 import android.speech.tts.TextToSpeech
 import android.speech.tts.TextToSpeech.QUEUE_ADD
 import android.speech.tts.TextToSpeech.SUCCESS
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -232,6 +234,7 @@ class ViewPagerAdapter(
         return list.size
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: ViewPagerAdapter.Pager2ViewHolder, position: Int) {
         var item = list[position]
 
@@ -239,11 +242,34 @@ class ViewPagerAdapter(
             itemQuestion.text = item.question
             itemQuestions.text = item.OptionOne
 
-            if (position >= 7) {
-                itemQuestion8.text = "Consonants Sounds: Plosives"
-            } else if (position >= 14 )
+            itemQuestion8.text = when (position) {
+                7 -> "Consonants Sounds: Plosives"
+                8 -> "Consonants Sounds: Plosives"
+                9 -> "Consonants Sounds: Plosives"
+                10 -> "Consonants Sounds: Plosives"
+                11 -> "Consonants Sounds: Plosives"
+                12 -> "Consonants Sounds: Plosives"
+                13 -> "Consonants Sounds: Plosives"
+                14 -> "Consonants Sounds: Affricates"
+                15 -> "Consonants Sounds: Affricates"
+                16 -> "Consonants Sounds: Nasals"
+                17 -> "Consonants Sounds: Nasals"
+                18 -> "Consonants Sounds: Nasals"
+                19 -> "Consonants Sounds: Approximants"
+                20 -> "Consonants Sounds: Approximants"
+                21 -> "Consonants Sounds: Approximants"
+                22 -> "Consonants Sounds: Approximants"
+
+                else -> "Consonants Sounds: Fricatives"
+            }
+
+             if (position == 23 )
             {
-                itemQuestion8.text = "Consonants Sounds: Affricates"
+                itemQuestions.text = "Vowels"
+                itemQuestions.setTextColor(R.color.purple_500)
+                itemQuestions.setTextSize(TypedValue.COMPLEX_UNIT_SP, 67.toFloat());
+                itemQuestion8.text = ""
+                button.setVisibility(View.GONE)
             }
 
 

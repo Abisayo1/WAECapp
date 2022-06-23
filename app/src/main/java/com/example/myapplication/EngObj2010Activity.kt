@@ -203,36 +203,162 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 
         liste.add(
             englishObj2010(
-                10,
-                "Bag, bubble, build, robe.",
-                "/b/ as in:"
+                15,
+                "Choose, cheese, church, watch.",
+                "/ʈʃ/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                10,
-                "Bag, bubble, build, robe.",
-                "/b/ as in:"
+                16,
+                "Joy, juggle, juice, stage.",
+                "/dʒ/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                10,
-                "Bag, bubble, build, robe.",
-                "/b/ as in:"
+                17,
+                "Room, mother, mad, more.",
+                "/m/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                10,
-                "Bag, bubble, build, robe.",
-                "/b/ as in:"
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                19,
+                "King, thing, song, swimming.",
+                "/ŋ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                20,
+                "Road, roses, river, ring, ride.",
+                "/r/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                21,
+                "Yellow, usual, tune, yesterday, yard.",
+                "/j/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                22,
+                "Now, nobody, knew, turn.",
+                "/w/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                23,
+                "Law, lots, leap, long, pill, cold, chill, melt",
+                "/l and ɫ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                24,
+                "",
+                ""
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                18,
+                "Now, nobody, knew, turn.",
+                "/n/ as in:"
 
             )
         )
