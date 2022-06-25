@@ -14,7 +14,7 @@
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="aLearn"
+        android:text="alearn"
         android:textColor ="@color/white"
         android:textSize="42sp"
         android:gravity="center"

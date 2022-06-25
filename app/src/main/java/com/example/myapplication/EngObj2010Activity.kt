@@ -267,7 +267,7 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
         liste.add(
             englishObj2010(
                 22,
-                "Now, nobody, knew, turn.",
+                "Wall, walk, wine, world.",
                 "/w/ as in:"
 
             )
@@ -293,78 +293,165 @@ class MainActivity3 : AppCompatActivity() //,View.OnClickListener
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                25,
+                "Went, intend, send, letter.",
+                "/e/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                26,
+                "Cat, hand, nap, flat, have.",
+                "/æ/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                27,
+                "Fun, love, money, one, London, come.",
+                "/ʌ/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                28,
+                "Put, look, should, cook, book, look.",
+                "/ʊ/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                29,
+                "Rob, top, watch, squat, sausage.",
+                "/ɒ/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                30,
+                "Alive, again, mother.",
+                "/ə/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                31,
+                "Need, beat, team.",
+                "/i:/ as in:"
 
             )
         )
 
         liste.add(
             englishObj2010(
-                18,
-                "Now, nobody, knew, turn.",
-                "/n/ as in:"
+                32,
+                "Nurse, heard, third, turn.",
+                "/ɜ:/ as in:"
 
             )
         )
 
+        liste.add(
+            englishObj2010(
+                33,
+                "Talk, law, bored, yawn, jaw.",
+                "/ɔ:/ as in:"
 
+            )
+        )
 
+        liste.add(
+            englishObj2010(
+                34,
+                "Few, boot, lose, gloomy, fruit, chew.",
+                "/u:/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                35,
+                "Fast, car, hard, bath.",
+                "/ɑ:/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                36,
+                "Near, ear, clear, tear, beer, fear",
+                "/ɪə/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                37,
+                "Hair, there, care, stairs, pear",
+                "/eə/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                38,
+                "Face, space, rain, case, eight",
+                "/eɪ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                39,
+                "Joy, employ, toy, coil, oyster.",
+                "/ɔɪ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                40,
+                "My, sight, pride, kind, flight",
+                "/aɪ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                41,
+                "No, don’t, stones, alone, hole",
+                "/əʊ/ as in:"
+
+            )
+        )
+
+        liste.add(
+            englishObj2010(
+                42,
+                "Mouth, house, brown, cow, out",
+                "/aʊ/ as in:"
+
+            )
+        )
 
         val adapter = ViewPagerAdapter(liste)
         view_pager.adapter = adapter

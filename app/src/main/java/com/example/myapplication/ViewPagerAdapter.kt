@@ -144,6 +144,7 @@ class ViewPagerAdapter(
         val itemQuestions: TextView = itemView.findViewById(R.id.question123)
         val itemQuestion8: TextView = itemView.findViewById(R.id.question8)
         val button: Button = itemView.findViewById(R.id.fabPlay)
+        val button2: Button = itemView.findViewById(R.id.fabPlayGame)
 
         //val progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
         //val progressBarText: TextView = itemView.findViewById(R.id.tv_progress)
@@ -260,6 +261,25 @@ class ViewPagerAdapter(
                 21 -> "Consonants Sounds: Approximants"
                 22 -> "Consonants Sounds: Approximants"
 
+                24 -> "Vowels Sounds: Short Vowels"
+                25 -> "Vowels Sounds: Short Vowels"
+                26 -> "Vowels Sounds: Short Vowels"
+                27 -> "Vowels Sounds: Short Vowels"
+                28 -> "Vowels Sounds: Short Vowels"
+                29 -> "Vowels Sounds: Short Vowels"
+                30 -> "Vowels Sounds: Long Vowels"
+                31 -> "Vowels Sounds: Long Vowels"
+                32 -> "Vowels Sounds: Long Vowels"
+                33 -> "Vowels Sounds: Long Vowels"
+                34 -> "Vowels Sounds: Long Vowels"
+                35 -> "Vowels Sounds: Diphthong Vowels"
+                36 -> "Vowels Sounds: Diphthong Vowels"
+                37 -> "Vowels Sounds: Diphthong Vowels"
+                38 -> "Vowels Sounds: Diphthong Vowels"
+                39 -> "Vowels Sounds: Diphthong Vowels"
+                40 -> "Vowels Sounds: Diphthong Vowels"
+                41 -> "Vowels Sounds: Diphthong Vowels"
+
                 else -> "Consonants Sounds: Fricatives"
             }
 
@@ -270,6 +290,11 @@ class ViewPagerAdapter(
                 itemQuestions.setTextSize(TypedValue.COMPLEX_UNIT_SP, 67.toFloat());
                 itemQuestion8.text = ""
                 button.setVisibility(View.GONE)
+            }
+
+            if (position == 41 )
+            {
+                button2.setVisibility(View.VISIBLE)
             }
 
 
