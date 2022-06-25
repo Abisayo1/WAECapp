@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.app.Application
 import android.bluetooth.BluetoothStatusCodes.SUCCESS
 import android.content.Context
 import android.content.Intent
@@ -18,6 +19,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_page.view.*
 import java.util.*
@@ -163,33 +165,6 @@ class ViewPagerAdapter(
 
         init {
 
-////                        if (checkedId == R.id.firstAnswerRadioButton) {
-//                            defaultView()
-//                            if (item.CorrectAnswer == 1) {
-//                                mCorrectAnswers++
-//                            }
-//                        } else if (checkedId == R.id.SecondAnswerRadioButton) {
-//                            defaultView()
-//                            if (item.CorrectAnswer == 2) {
-//                                mCorrectAnswers++
-//                            }
-//                        } else if (checkedId == R.id.ThirdAnswerRadioButton) {
-//                            defaultView()
-//                            if (item.CorrectAnswer == 3) {
-//                                mCorrectAnswers++
-//                            }
-//                        } else if (checkedId == R.id.FourthAnswerRadioButton) {
-//                            defaultView()
-//                            Toast.makeText(itemView.context, "Selected position:",
-//                                    Toast.LENGTH_SHORT).show()
-//
-//                            if (item.CorrectAnswer == 4) {
-//                                mCorrectAnswers++
-//                            }
-//
-//
-//                    })
-
 
             button.setOnClickListener {
                 tts = TextToSpeech(itemView.context, TextToSpeech.OnInitListener {
@@ -204,6 +179,11 @@ class ViewPagerAdapter(
                         )
                     }
                 })
+            }
+
+            button2.setOnClickListener {
+                val intent = Intent(itemView.context, PlayGame::class.java)
+                itemView.context.startActivity(intent)
             }
 
 

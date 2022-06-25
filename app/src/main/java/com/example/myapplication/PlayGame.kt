@@ -9,26 +9,46 @@ import androidx.activity.viewModels
 import com.example.myapplication.databinding.ActivityTextToSpeechBinding
 import java.util.*
 import android.speech.tts.TextToSpeech
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_text_to_speech.*
 
 
-class TextToSpeech : AppCompatActivity() {
+class PlayGame : AppCompatActivity() {
         private lateinit var binding: ActivityTextToSpeechBinding
         private val model: BaseViewModel by viewModels()
+        var scores = 0
+
 
         @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             binding = ActivityTextToSpeechBinding.inflate(layoutInflater)
             setContentView(binding.root)
+
             model.initial(textToSpeechEngine, startForResult)
             with(binding) {
                 fabVoice.setOnClickListener { model.displaySpeechRecognizer() }
-                fabPlay.setOnClickListener {
-                    val text = edtText.text?.trim().toString()
-                    model.speak(if (text.isNotEmpty()) text else "Text tidak boleh kosong")
+
+            }
+
+            fabPlay.setOnClickListener {
+                val score = findViewById<TextView>(R.id.score)
+                if (edtText.text.toString().isEmpty()) {
+                    Toast.makeText(this, "answer", Toast.LENGTH_SHORT).show()
+                } else {
+                    score.text = "$scores, ${edtText.text.toString()},"
+                    if ("${edtText.text.toString()}".equals("${binding.question8.text}", ignoreCase = true)) {
+                        scores = +1
+                        score.text = "$scores"
+                    }
                 }
             }
+
+
+
         }
 
         private val startForResult = registerForActivityResult(

@@ -22,7 +22,7 @@
             android:name=".Learning"
             android:exported="false" />
         <activity
-            android:name=".TextToSpeech"
+            android:name=".PlayGame"
             android:exported="false" />
         <activity android:name=".MainActivity3_eng_obj_2010_ans" />
         <activity android:name=".Eng2010ObjAns" />

@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/drawable/rounded_rectangle.xml" value="0.186" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/font/amiko.xml" value="0.303125" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/font/bubblegum_sans.xml" value="0.303125" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/font/oi.xml" value="0.303125" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/layout/activity_learning.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/layout/activity_main3.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/layout/activity_result.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/layout/activity_subjects.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/layout/activity_text_to_speech.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/WAECapp/app/src/main/res/layout/activity_welcome.xml" value="0.2536764705882353" />

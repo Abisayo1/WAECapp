@@ -3,5 +3,6 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amiko</item>
         <item>@font/bubblegum_sans</item>
+        <item>@font/oi</item>
     </array>
 </resources>
