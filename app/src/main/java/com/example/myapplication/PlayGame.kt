@@ -70,15 +70,6 @@ class PlayGame : AppCompatActivity() {
                 override fun beforeTextChanged(s: CharSequence, start: Int,
                                                count: Int, after: Int) {
 
-                    if (count >= 4) {
-                        edtText.text?.clear()
-                        Toast.makeText(
-                            this@PlayGame,
-                            "Do not type, speak to the mic to win this level",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-
 
                 }
 
@@ -104,6 +95,7 @@ class PlayGame : AppCompatActivity() {
                         scores++
                         Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
                         score.text = "$scores"
+                        edtText.text?.clear()
                         onClick()
 
                     } else if("${edtText.text.toString()}" != "${binding.question8.text}") {

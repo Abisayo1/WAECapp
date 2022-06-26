@@ -19,7 +19,7 @@
         android:layout_marginRight="16dp"
         android:fontFamily="@font/oi"
         android:gravity="center"
-        android:text="0/10"
+        android:text="0"
         android:textColor="@color/purple_500"
         android:textSize="42sp"
         app:fontFamily="@font/bubblegum_sans"
