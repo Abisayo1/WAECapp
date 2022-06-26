@@ -50,6 +50,15 @@ class PlayGame : AppCompatActivity() {
             binding.question123.text = transcript[counter]//set the initial message.
 
 
+            fun onClicks() {
+                val tx = binding.question8
+                val xt = binding.question123
+                counter++
+                if (counter >= words.size) counter = 0
+                tx.text = words[counter] //set the new message.
+                xt.text = transcript[counter]
+            }
+
             fun onClick() {
                 counter = (0..4).random()
                 val tx = binding.question8
@@ -99,7 +108,7 @@ class PlayGame : AppCompatActivity() {
                         Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
                         score.text = "$scores"
                         edtText.text?.clear()
-                        onClick()
+                        onClicks()
 
                     } else if("${edtText.text.toString()}" != "${binding.question8.text}") {
                         edtText.text?.clear()
