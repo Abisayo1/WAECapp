@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.app.Application
 import android.content.Context
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.speech.RecognizerIntent
@@ -19,9 +20,9 @@ import java.util.*
 
 
 class PlayGame : AppCompatActivity() {
-        var counter = 0
-        var shoe = 0
-        private lateinit var binding: ActivityTextToSpeechBinding
+        var mMediaPlayer: MediaPlayer? = null
+        var counter = (0..4).random()
+            private lateinit var binding: ActivityTextToSpeechBinding
         private val model: BaseViewModel by viewModels()
         var scores = 0
 
@@ -42,16 +43,18 @@ class PlayGame : AppCompatActivity() {
                 "/ˈkwʌɪə/"
             )
 
+            playSound()
 
-            binding.question8.text =
-                words[counter] //set the initial message.
+
+            binding.question8.text =  words[counter]
+            binding.question123.text = transcript[counter]//set the initial message.
 
 
             fun onClick() {
+                counter = (0..4).random()
                 val tx = binding.question8
                 val xt = binding.question123
-                counter++
-                if (counter >= words.size) counter = 0
+//                if (counter >= words.size) //counter = 0
                 tx.text = words[counter] //set the new message.
                 xt.text = transcript[counter]
             }
@@ -126,4 +129,39 @@ class PlayGame : AppCompatActivity() {
                 if (it == TextToSpeech.SUCCESS) textToSpeechEngine.language = Locale("en-GB")
             }
         }
+
+
+
+    // 1. Plays the water sound
+    fun playSound() {
+        if (mMediaPlayer == null) {
+            mMediaPlayer = MediaPlayer.create(this, R.raw.game)
+            mMediaPlayer!!.isLooping = true
+            mMediaPlayer!!.start()
+        } else mMediaPlayer!!.start()
+    }
+
+    // 2. Pause playback
+    fun pauseSound() {
+        if (mMediaPlayer?.isPlaying == true) mMediaPlayer?.pause()
+    }
+
+    // 3. Stops playback
+    fun stopSound() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.stop()
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
+
+    // 4. Destroys the MediaPlayer instance when the app is closed
+    override fun onStop() {
+        super.onStop()
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
+
     }
