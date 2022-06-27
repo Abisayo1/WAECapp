@@ -67,7 +67,7 @@ class Welcome : AppCompatActivity() {
             }
 
         button1.setOnClickListener{
-            val intent = Intent(this, PlayGame::class.java)
+            val intent = Intent(this, PlayArea::class.java)
             startActivity(intent)
 
         }
