@@ -1,0 +1,14 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/chkResult"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_emoji_events_24"
+        android:iconTint="#FFD700"
+        android:orderInCategory="100"
+        android:tooltipText="Check Score"
+        android:title="Check Score"
+        android:visible="true"
+        app:showAsAction="always|withText" />
+</menu>

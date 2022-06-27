@@ -39,17 +39,12 @@ class ResultActivity : AppCompatActivity() {
         score.text = "Your score is $correctAnswer out of $totalQuestions"
 
         btn_result2.setOnClickListener{
-
-            Toast.makeText(this, " On checked change :" +
-                    "  $array",
-                    Toast.LENGTH_SHORT).show()
-
             startActivity(Intent(this, MainActivity::class.java))
             finish()
     }
         btn_result.setOnClickListener{
 
-            val intent = Intent(this, MainActivity3_eng_obj_2010_ans::class.java)
+            val intent = Intent(this, PlayGame::class.java)
             intent.putExtra(Eng2010Constants.ONE, array)
             startActivity(intent)
             finish()

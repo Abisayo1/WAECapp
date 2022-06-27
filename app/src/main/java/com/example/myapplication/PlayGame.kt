@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.app.Application
 import android.content.Context
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
@@ -17,11 +18,13 @@ import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityTextToSpeechBinding
+import kotlinx.android.synthetic.main.activity_result.*
 import kotlinx.android.synthetic.main.activity_text_to_speech.*
 import java.util.*
 
 
 class PlayGame : AppCompatActivity() {
+        var numAtp = 0
         var mMediaPlayer: MediaPlayer? = null
         var counter = (0..4).random()
             private lateinit var binding: ActivityTextToSpeechBinding
@@ -106,6 +109,7 @@ class PlayGame : AppCompatActivity() {
                 }
                 else {
                     if ("${edtText.text.toString()}".equals("${binding.question8.text}", ignoreCase = true)) {
+                        numAtp++
                         scores++
                         Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
                         score.text = "$scores"
@@ -113,6 +117,7 @@ class PlayGame : AppCompatActivity() {
                         onClicks()
 
                     } else if("${edtText.text.toString()}" != "${binding.question8.text}") {
+                        numAtp++
                         edtText.text?.clear()
                         Toast.makeText(this, "OOpse!", Toast.LENGTH_SHORT).show()
                         onClick()
@@ -186,7 +191,11 @@ class PlayGame : AppCompatActivity() {
         // Handle action bar item clicks here.
         val id = item.itemId
         return if (id == R.id.chkResult) {
-            //process your onClick here
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra(Eng2010Constants.CORRECT_ANSWERS, scores)
+                intent.putExtra(Eng2010Constants.TOTAL_QUESTIONS, numAtp)
+                startActivity(intent)
+                finish()
             true
         } else super.onOptionsItemSelected(item)
     }
