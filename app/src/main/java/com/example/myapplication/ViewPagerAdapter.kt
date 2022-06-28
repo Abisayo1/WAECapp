@@ -182,7 +182,7 @@ class ViewPagerAdapter(
             }
 
             button2.setOnClickListener {
-                val intent = Intent(itemView.context, PlayGame::class.java)
+                val intent = Intent(itemView.context, PlayArea::class.java)
                 itemView.context.startActivity(intent)
             }
 
@@ -269,12 +269,12 @@ class ViewPagerAdapter(
                 itemQuestions.setTextColor(R.color.purple_500)
                 itemQuestions.setTextSize(TypedValue.COMPLEX_UNIT_SP, 67.toFloat());
                 itemQuestion8.text = ""
-                button.setVisibility(View.GONE)
+                button.visibility = View.GONE
             }
 
             if (position == 41 )
             {
-                button2.setVisibility(View.VISIBLE)
+                button2.visibility = View.VISIBLE
             }
 
 

@@ -119,7 +119,7 @@ class PlayGame : AppCompatActivity() {
                     } else if("${edtText.text.toString()}" != "${binding.question8.text}") {
                         numAtp++
                         edtText.text?.clear()
-                        Toast.makeText(this, "OOpse!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "OOps!", Toast.LENGTH_SHORT).show()
                         onClick()
                     }
                 }

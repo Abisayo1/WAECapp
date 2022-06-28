@@ -16,6 +16,15 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".InstructionWrite"
+            android:exported="false" />
+        <activity
+            android:name=".WritingLearn"
+            android:exported="false" />
+        <activity
+            android:name=".InstructionRead"
+            android:exported="false" />
+        <activity
             android:name=".PlayArea"
             android:exported="false" />
         <activity

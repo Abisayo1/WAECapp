@@ -2,37 +2,29 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.media.MediaPlayer
-import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
 
-class PlayArea : AppCompatActivity() {
+class InstructionRead : AppCompatActivity() {
+
     var mMediaPlayer: MediaPlayer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_play_area)
+        setContentView(R.layout.activity_instruction_read)
+        val button = findViewById<Button>(R.id.button3)
 
-        val button1 = findViewById<Button>(R.id.button3)
-        val button = findViewById<Button>(R.id.button0)
 
-        button1.setOnClickListener {
-            val intent = Intent(this, InstructionRead::class.java)
+        button.setOnClickListener{
+            val intent = Intent(this, PlayGame::class.java)
             startActivity(intent)
-        }
 
-        button.setOnClickListener {
-            val intent = Intent(this, InstructionWrite::class.java)
-            startActivity(intent)
         }
 
         playSound()
-
-
     }
 
-        // 1. Plays the water sound
+    // 1. Plays the water sound
     fun playSound() {
         if (mMediaPlayer == null) {
             mMediaPlayer = MediaPlayer.create(this, R.raw.up_beat)
@@ -63,6 +55,5 @@ class PlayArea : AppCompatActivity() {
             mMediaPlayer = null
         }
     }
-
-
 }
+
