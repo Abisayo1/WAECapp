@@ -103,12 +103,13 @@ class PlayGame : AppCompatActivity() {
 
 
             fabPlay.setOnClickListener {
+                val edt = edtText.text.toString().trim()
                 val score = binding.score
-                if (edtText.text.toString().isEmpty()) {
+                if (edt.isEmpty()) {
                     Toast.makeText(this, "Pronounce the word to win points!", Toast.LENGTH_SHORT).show()
                 }
                 else {
-                    if ("${edtText.text.toString()}".equals("${binding.question8.text}", ignoreCase = true)) {
+                    if ("${edt}".equals("${binding.question8.text}", ignoreCase = true)) {
                         numAtp++
                         scores++
                         Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
@@ -116,7 +117,7 @@ class PlayGame : AppCompatActivity() {
                         edtText.text?.clear()
                         onClicks()
 
-                    } else if("${edtText.text.toString()}" != "${binding.question8.text}") {
+                    } else if("${edt}" != "${binding.question8.text}") {
                         numAtp++
                         edtText.text?.clear()
                         Toast.makeText(this, "OOps!", Toast.LENGTH_SHORT).show()
