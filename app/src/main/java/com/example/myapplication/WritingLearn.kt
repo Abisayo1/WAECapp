@@ -96,22 +96,22 @@ class WritingLearn : AppCompatActivity() {
 
         done.setOnClickListener {
             val score = binding.score
-            val Edit = binding.edtText
-            if (Edit.text.toString().isEmpty()) {
+            val Edit = binding.edtText.text.toString().trim()
+            if (Edit.isEmpty()) {
                 Toast.makeText(this, "Type the words to win points", Toast.LENGTH_SHORT).show()
             }
             else {
-                if ("${Edit.text.toString()}".equals("${binding.question8.text}", ignoreCase = true)) {
+                if ("${Edit}".equals("${binding.question8.text}", ignoreCase = true)) {
                     numAtp++
                     scores++
                     Toast.makeText(this, "Well Done!", Toast.LENGTH_SHORT).show()
                     score.text = "$scores"
-                    Edit.text?.clear()
+                    binding.edtText.text?.clear()
                     onClicks()
 
-                } else if("${Edit.text.toString()}" != "${binding.question8.text}") {
+                } else if("${Edit}" != "${binding.question8.text}") {
                     numAtp++
-                    Edit.text?.clear()
+                    binding.edtText.text?.clear()
                     Toast.makeText(this, "Oops!", Toast.LENGTH_SHORT).show()
                     onClick()
                 }
