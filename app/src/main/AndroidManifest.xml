@@ -16,6 +16,12 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CreateClass"
+            android:exported="false" />
+        <activity
+            android:name=".Choice"
+            android:exported="false" />
+        <activity
             android:name=".InstructionWrite"
             android:exported="false" />
         <activity

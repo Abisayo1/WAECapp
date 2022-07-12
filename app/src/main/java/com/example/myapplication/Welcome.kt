@@ -58,16 +58,11 @@ class Welcome : AppCompatActivity() {
         val button1 = findViewById<Button>(R.id.button0)
         val text = findViewById<TextView>(R.id.question8)
 
-        text.text = "Welcome ${name} My name is Encanto and I will be your guide as you play this fun game! To get better at the game, learn your sounds first."
+        text.text = "Welcome ${name}!My name is Encanto and I will be your guide as you play this fun game!To get better at the game,learn your sounds first."
 
-        button.setOnClickListener{
-                val intent = Intent(this, MainActivity3::class.java)
-                startActivity(intent)
-
-            }
 
         button1.setOnClickListener{
-            val intent = Intent(this, PlayArea::class.java)
+            val intent = Intent(this, Choice::class.java)
             startActivity(intent)
 
         }
